@@ -1,6 +1,7 @@
 from world import load_world
 from player import Player
 from commands import handle_command
+from ui import print_animated
 
 def main():
     rooms = load_world()
@@ -18,7 +19,7 @@ def main():
         command = input("> ").strip()
         handle_command(command, state)
 
-    print("Closing the game...")
+    print_animated("Closing the game...")
 
 if __name__ == "__main__":
     main()
