@@ -1,0 +1,34 @@
+def handle_command(cmd, state):
+    words = cmd.split()
+    if not words:
+        return
+
+    verb = words[0]
+
+    match verb:
+        case "look":
+            state["rooms"][state["current"]].look()
+
+        case "go":
+            if len(words) < 2:
+                print("Go where?")
+                return
+            move(words[1], state)
+
+        case "inventory":
+            state["player"].show_inventory()
+
+        case "quit":
+            state["running"] = False
+
+        case _:
+            print("Unknown command.")
+
+
+def move(direction, state):
+    room = state["rooms"][state["current"]]
+    if direction in room.exits and room.exits[direction]:
+        state["current"] = room.exits[direction]
+        state["rooms"][state["current"]].look()
+    else:
+        print("Can't go that way.")

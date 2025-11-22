@@ -1,0 +1,29 @@
+{
+  "rooms": {
+    "entrance": {
+      "name": "Collapsed Entrance",
+      "desc": "Dust, broken tiles, cold air from deep tunnels.",
+      "exits": {
+        "north": "tunnel1"
+      },
+      "items": ["flashlight"]
+    },
+    "tunnel1": {
+      "name": "Long Tunnel",
+      "desc": "Metal echoes. Something drips in the dark.",
+      "exits": {
+        "south": "entrance",
+        "north": "station_a"
+      },
+      "items": []
+    },
+    "station_a": {
+      "name": "Abandoned Station A",
+      "desc": "Empty benches. A broken turnstile. Silence.",
+      "exits": {
+        "south": "tunnel1"
+      },
+      "items": []
+    }
+  }
+}
