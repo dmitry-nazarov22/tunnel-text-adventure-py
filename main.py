@@ -11,7 +11,7 @@ def main():
     "current": "entrance",
     "player": Player(),
     "running": True
-}
+    }
 
     rooms[state["current"]].look()
 

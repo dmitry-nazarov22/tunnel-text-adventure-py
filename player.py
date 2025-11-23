@@ -4,9 +4,13 @@ class Player:
         self.energy = 100
         self.score = 0
 
-    def add_item(self, name):
-        print(f"You picked up {name}.")
-        self.inventory.append(name)
+    def add_item(self, name, room):
+        if name in room.items:
+            print(f"You picked up {name}.")
+            self.inventory.append(name)
+            room.items.remove(name)
+        else:
+            print("No such items around.")
 
     def show_inventory(self):
         if self.inventory:
