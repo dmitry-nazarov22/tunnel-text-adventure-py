@@ -2,27 +2,179 @@
   "rooms": {
     "entrance": {
       "name": "Collapsed Entrance",
-      "desc": "Dust, broken tiles, cold air from deep tunnels.",
-      "exits": {
-        "north": "tunnel1"
-      },
+      "desc": "Cold air. Dust. Broken concrete. A dark tunnel leads north.\n*Where am I?*",
+      "exits": { "north": "tunnel1" },
       "items": ["flashlight"]
     },
+
     "tunnel1": {
       "name": "Long Tunnel",
-      "desc": "Metal echoes. Something drips in the dark.",
+      "desc": "Metal echoes. Dripping water. Something moves far ahead.",
       "exits": {
         "south": "entrance",
+        "north": "junction1"
+      },
+      "items": []
+    },
+
+    "junction1": {
+      "name": "Track Junction",
+      "desc": "Three paths. Left is darker than night.",
+      "exits": {
+        "south": "tunnel1",
+        "west": "dark_tunnel",
+        "east": "service_room1",
         "north": "station_a"
       },
       "items": []
     },
+
+    "dark_tunnel": {
+      "name": "Pitch Black Tunnel",
+      "desc": "You can't see anything without light. Something breathes.",
+      "exits": {
+        "east": "junction1",
+        "north": "storage_dark"
+      },
+      "items": []
+    },
+
+    "storage_dark": {
+      "name": "Maintenance Storage",
+      "desc": "Old tools. Dust. A faint metallic smell.",
+      "exits": { "south": "dark_tunnel" },
+      "items": ["crowbar", "battery"]
+    },
+
+    "service_room1": {
+      "name": "Service Room",
+      "desc": "Broken lockers. A smashed radio. Silence.",
+      "exits": { "west": "junction1" },
+      "items": ["energy_drink"]
+    },
+
     "station_a": {
       "name": "Abandoned Station A",
-      "desc": "Empty benches. A broken turnstile. Silence.",
+      "desc": "Platform lights flicker. Echo feels delayed.",
       "exits": {
-        "south": "tunnel1"
+        "south": "junction1",
+        "north": "station_corridor",
+        "east": "side_tunnel"
       },
+      "items": []
+    },
+
+    "station_corridor": {
+      "name": "Station Corridor",
+      "desc": "Old posters. Scratches on walls. Someone passed recently.",
+      "exits": {
+        "south": "station_a",
+        "east": "locker_room",
+        "north": "station_b"
+      },
+      "items": []
+    },
+
+    "locker_room": {
+      "name": "Locker Room",
+      "desc": "Rusty lockers. The smell of mold.",
+      "exits": { "west": "station_corridor" },
+      "items": ["old_key", "protein_bar"]
+    },
+
+    "station_b": {
+      "name": "Station B",
+      "desc": "Wide platform. A broken train rests silently.",
+      "exits": {
+        "south": "station_corridor",
+        "north": "train_car1",
+        "west": "maintenance_shaft"
+      },
+      "items": []
+    },
+
+    "train_car1": {
+      "name": "Train Car 1",
+      "desc": "Seats ripped open. Dark stains on the floor.",
+      "exits": { "south": "station_b", "north": "train_car2" },
+      "items": []
+    },
+
+    "train_car2": {
+      "name": "Train Car 2",
+      "desc": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
+      "exits": { "south": "train_car1", "north": "train_car3" },
+      "items": []
+    },
+
+    "train_car3": {
+      "name": "Train Car 3",
+      "desc": "You hear breathing for a second. Then it stops.",
+      "exits": { "south": "train_car2" },
+      "items": ["adrenaline"]
+    },
+
+    "maintenance_shaft": {
+      "name": "Maintenance Shaft",
+      "desc": "Narrow path. Water dripping. Rust everywhere.",
+      "exits": {
+        "east": "station_b",
+        "north": "generator_room"
+      },
+      "items": []
+    },
+
+    "generator_room": {
+      "name": "Generator Room",
+      "desc": "The engine is dead. Tools scattered around.",
+      "exits": {
+        "south": "maintenance_shaft",
+        "north": "power_control"
+      },
+      "items": ["fuse"]
+    },
+
+    "power_control": {
+      "name": "Power Control Room",
+      "desc": "Panels blinking faintly. Something was repaired recently.",
+      "exits": { "south": "generator_room" },
+      "items": ["station_keycard"]
+    },
+
+    "side_tunnel": {
+      "name": "Side Tunnel",
+      "desc": "Loose wires. A weak humming noise somewhere far ahead.",
+      "exits": {
+        "west": "station_a",
+        "north": "old_platform"
+      },
+      "items": []
+    },
+
+    "old_platform": {
+      "name": "Old Platform",
+      "desc": "Dusty. Old metro signs. Something ran across the tracks.",
+      "exits": {
+        "south": "side_tunnel",
+        "north": "sealed_door"
+      },
+      "items": []
+    },
+
+    "sealed_door": {
+      "name": "Sealed Door",
+      "desc": "Massive locked door. Requires keycard.",
+      "exits": {
+        "south": "old_platform",
+        "north": "escape_tunnel"
+      },
+      "items": []
+    },
+
+    "escape_tunnel": {
+      "name": "Escape Tunnel",
+      "desc": "Fresh air. The exit must be close.",
+      "exits": {},
       "items": []
     }
   }

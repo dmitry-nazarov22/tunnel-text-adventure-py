@@ -1,0 +1,33 @@
+
+
+									train car 3
+									[adrenaline]
+		power control room              |
+		[station keycard]				|
+				|					train car 2
+				|						|
+		  generator room                |
+			  [fuse]				train car 1             escape tunnel
+			    |                       |                        END
+				| 					    |                         |
+				|					    |                         |
+		maintenance shaft   <––––––  station B               sealed door
+										|                         |
+										|                         |
+			locker room   <––––––  station corridor            old platform
+		 [old key, protein bar]		    |                         |
+										|                         |
+		maintenance storage           station A    –––––––>    side tunnel
+		[crowbar, battery]			    |
+				|				        |
+				|				        |
+	pitch black tunnel   <––––––    track junction  –––––> service room
+										|				[energy drink]
+										|
+										|
+									long tunnel
+										|
+										|
+								collapsed entrance
+			                        [flashlight]
+			                           START
