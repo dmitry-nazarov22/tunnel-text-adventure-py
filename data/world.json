@@ -4,6 +4,7 @@
       "name": "Collapsed Entrance",
       "desc_full": "Cold air. Dust. Broken concrete. A dark tunnel leads north.\n*Where am I?*",
       "desc_short": "A dark tunnel leads north.",
+      "is_locked": "False",
       "exits": { "north": "tunnel1" },
       "items": ["flashlight"]
     },
@@ -12,6 +13,7 @@
       "name": "Long Tunnel",
       "desc_full": "Metal echoes. Dripping water. Something moves far ahead.",
       "desc_short": "Metal echoes. Dripping water.",
+      "is_locked": "False",
       "exits": {
         "south": "entrance",
         "north": "junction1"
@@ -23,6 +25,7 @@
       "name": "Track Junction",
       "desc_full": "Three paths. Left is darker than night.",
       "desc_short": "Three paths. Left is darker than night.",
+      "is_locked": "False",
       "exits": {
         "south": "tunnel1",
         "west": "dark_tunnel",
@@ -36,6 +39,7 @@
       "name": "Pitch Black Tunnel",
       "desc_full": "You can't see anything without light. Something breathes.",
       "desc_short": "You can't see anything without light.",
+      "is_locked": "True",
       "exits": {
         "east": "junction1",
         "north": "storage_dark"
@@ -47,6 +51,7 @@
       "name": "Maintenance Storage",
       "desc_full": "Old tools. Dust. A faint metallic smell.",
       "desc_short": "Old tools. Dust.",
+      "is_locked": "False",
       "exits": { "south": "dark_tunnel" },
       "items": ["crowbar", "battery"]
     },
@@ -55,6 +60,7 @@
       "name": "Service Room",
       "desc_full": "Broken lockers. A smashed radio. Silence.",
       "desc_short": "Broken lockers. A smashed radio.",
+      "is_locked": "False",
       "exits": { "west": "junction1" },
       "items": ["energy_drink"]
     },
@@ -63,6 +69,7 @@
       "name": "Abandoned Station A",
       "desc_full": "Platform lights flicker. Echo feels delayed.",
       "desc_short": "Platform lights flicker. Echo feels delayed.",
+      "is_locked": "False",
       "exits": {
         "south": "junction1",
         "north": "station_corridor",
@@ -75,6 +82,7 @@
       "name": "Station Corridor",
       "desc_full": "Old posters. Scratches on walls. Someone passed recently.",
       "desc_short": "Old posters. Scratches on walls.",
+      "is_locked": "False",
       "exits": {
         "south": "station_a",
         "east": "locker_room",
@@ -87,6 +95,7 @@
       "name": "Locker Room",
       "desc_full": "Rusty lockers. The smell of mold.",
       "desc_short": "Rusty lockers. The smell of mold.",
+      "is_locked": "False",
       "exits": { "west": "station_corridor" },
       "items": ["old_key", "protein_bar"]
     },
@@ -95,6 +104,7 @@
       "name": "Station B",
       "desc_full": "Wide platform. A broken train rests silently.",
       "desc_short": "Wide platform. A broken train rests silently.",
+      "is_locked": "False",
       "exits": {
         "south": "station_corridor",
         "north": "train_car1",
@@ -107,6 +117,7 @@
       "name": "Train Car 1",
       "desc_full": "Seats ripped open. Dark stains on the floor.",
       "desc_short": "Seats ripped open. Dark stains on the floor.",
+      "is_locked": "False",
       "exits": { "south": "station_b", "north": "train_car2" },
       "items": []
     },
@@ -115,6 +126,7 @@
       "name": "Train Car 2",
       "desc_full": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
       "desc_short": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
+      "is_locked": "False",
       "exits": { "south": "train_car1", "north": "train_car3" },
       "items": []
     },
@@ -123,6 +135,7 @@
       "name": "Train Car 3",
       "desc_full": "You hear breathing for a second. Then it stops.",
       "desc_short": "You hear breathing for a second. Then it stops.",
+      "is_locked": "False",
       "exits": { "south": "train_car2" },
       "items": ["adrenaline"]
     },
@@ -131,6 +144,7 @@
       "name": "Maintenance Shaft",
       "desc_full": "Narrow path. Water dripping. Rust everywhere.",
       "desc_short": "Narrow path. Water dripping. Rust everywhere.",
+      "is_locked": "False",
       "exits": {
         "east": "station_b",
         "north": "generator_room"
@@ -142,6 +156,7 @@
       "name": "Generator Room",
       "desc_full": "The engine is dead. Tools scattered around.",
       "desc_short": "The engine is dead. Tools scattered around.",
+      "is_locked": "False",
       "exits": {
         "south": "maintenance_shaft",
         "north": "power_control"
@@ -153,6 +168,7 @@
       "name": "Power Control Room",
       "desc_full": "Panels blinking faintly. Something was repaired recently.",
       "desc_short": "Panels blinking faintly. Something was repaired recently.",
+      "is_locked": "False",
       "exits": { "south": "generator_room" },
       "items": ["station_keycard"]
     },
@@ -161,6 +177,7 @@
       "name": "Side Tunnel",
       "desc_full": "Loose wires. A weak humming noise somewhere far ahead.",
       "desc_short": "Loose wires. A weak humming noise somewhere far ahead.",
+      "is_locked": "False",
       "exits": {
         "west": "station_a",
         "north": "old_platform"
@@ -172,6 +189,7 @@
       "name": "Old Platform",
       "desc_full": "Dusty. Old metro signs. Something ran across the tracks.",
       "desc_short": "Dusty. Old metro signs. Something ran across the tracks.",
+      "is_locked": "False",
       "exits": {
         "south": "side_tunnel",
         "north": "sealed_door"
@@ -183,6 +201,7 @@
       "name": "Sealed Door",
       "desc_full": "Massive locked door. Requires keycard.",
       "desc_short": "Massive locked door. Requires keycard.",
+      "is_locked": "False",
       "exits": {
         "south": "old_platform",
         "north": "escape_tunnel"
@@ -194,6 +213,7 @@
       "name": "Escape Tunnel",
       "desc_full": "Fresh air. The exit must be close.",
       "desc_short": "Fresh air. The exit must be close.",
+      "is_locked": "False",
       "exits": {},
       "items": []
     }

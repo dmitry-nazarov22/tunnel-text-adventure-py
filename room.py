@@ -1,10 +1,11 @@
 from ui import print_animated
 
 class Room:
-    def __init__(self, name, desc_full, desc_short, exits, items=None):
+    def __init__(self, name, desc_full, desc_short, is_locked, exits, items=None):
         self.name = name
         self.desc_full = desc_full
         self.desc_short = desc_short
+        self.is_locked = is_locked
         self.exits = exits
         self.items = items or []
 

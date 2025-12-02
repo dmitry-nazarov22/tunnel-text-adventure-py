@@ -34,7 +34,10 @@ def handle_command(cmd, state):
 def move(direction, state):
     room = state["rooms"][state["current"]]
     if direction in room.exits and room.exits[direction]:
-        state["current"] = room.exits[direction]
-        state["rooms"][state["current"]].look()
+        if state["rooms"][room.exits[direction]].is_locked != 'True':
+            state["current"] = room.exits[direction]
+            state["rooms"][state["current"]].look("full")
+        else:
+            print("Can't go there yet. Maybe I'll find something that will help me.")
     else:
         print("Can't go that way.")
