@@ -10,7 +10,7 @@ def handle_command(cmd, state):
 
     match verb:
         case "look":
-            state["rooms"][state["current"]].look()
+            state["rooms"][state["current"]].look('short')
 
         case "go":
             if len(words) < 2:

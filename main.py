@@ -13,7 +13,7 @@ def main():
     "running": True
     }
 
-    rooms[state["current"]].look()
+    rooms[state["current"]].look('full')
 
     while state["running"]:
         command = input("> ").strip()
