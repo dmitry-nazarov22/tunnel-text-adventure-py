@@ -42,9 +42,13 @@ def move(direction, state):
 
     if direction in room.exits and room.exits[direction]:
         if target_room.is_locked != 'True':
-            state["current"] = room.exits[direction]
-            state["rooms"][state["current"]].look("full")
+            if target_room.is_dark != 'True':
+                state["current"] = room.exits[direction]
+                state["rooms"][state["current"]].look("full")
+            else:
+                state["current"] = room.exits[direction]
+                state["rooms"][state["current"]].look("dark")
         else:
-            print_animated("Can't go there yet. Maybe I'll find something that will help me.")
+            print_animated("The door is blocked... Maybe I'll find something that will help me.")
     else:
         print_animated("Can't go that way.")

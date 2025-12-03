@@ -11,7 +11,9 @@ def load_world():
             name = room_data["name"],
             desc_full = room_data["desc_full"],
             desc_short = room_data["desc_short"],
+            desc_dark = room_data["desc_dark"],
             is_locked = room_data["is_locked"],
+            is_dark = room_data["is_dark"],
             exits = room_data["exits"],
             items = room_data["items"]
         )

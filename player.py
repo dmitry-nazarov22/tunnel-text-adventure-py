@@ -29,13 +29,23 @@ class Player:
 
         match name:
             case "flashlight":
-                if state['current'] == "junction1":
-                    print('YES')
-                    print_animated(f'You light up your newly found flashlight. This will help you see in the dark tunnel...')
-                    print(state['rooms'][state["rooms"][state['current']].exits["west"]].is_locked)
-                    state['rooms'][state["rooms"][state['current']].exits["west"]].is_locked = 'False'
+                if current.is_dark == 'True':
+                    print_animated(f'You light up your newly found flashlight. This will help you see in here...')
+                    current.is_dark = 'False'
+                    state["rooms"][state["current"]].look("full")
                 else:
-                    print_animated('There are no rooms that would need this.')
+                    print_animated('I should preserve battery for a darker room.')
+
+            case "crowbar":
+                all_directions = current.exits
+                for direction in all_directions:
+                    if state['rooms'][state["rooms"][state['current']].exits[direction]].is_locked == 'True':
+                        print_animated(f'You break the ruined door and can now enter it.')
+                        state['rooms'][state["rooms"][state['current']].exits[direction]].is_locked = 'False'
+                        return True
+
+                print_animated('There are no rooms that would need this.')
+                return False
 
             case _:
                 print("Error: item not found")
