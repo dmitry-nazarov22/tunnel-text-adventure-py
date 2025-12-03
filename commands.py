@@ -38,9 +38,9 @@ def handle_command(cmd, state):
 
 def move(direction, state):
     room = state["rooms"][state["current"]]
-    target_room = state["rooms"][room.exits[direction]]
 
     if direction in room.exits and room.exits[direction]:
+        target_room = state["rooms"][room.exits[direction]]
         if target_room.is_locked != 'True':
             if target_room.is_dark != 'True':
                 state["current"] = room.exits[direction]
