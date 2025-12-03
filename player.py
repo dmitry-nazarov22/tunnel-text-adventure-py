@@ -1,3 +1,5 @@
+from ui import print_animated
+
 class Player:
     def __init__(self):
         self.inventory = []
@@ -6,7 +8,7 @@ class Player:
 
     def add_item(self, name, room):
         if name in room.items:
-            print(f"You picked up {name}.")
+            print_animated(f"You picked up {name}.")
             self.inventory.append(name)
             room.items.remove(name)
         else:
@@ -18,10 +20,23 @@ class Player:
         else:
             print("You carry nothing.")
 
-    def use_item(self, name):
+    def use_item(self, state, name):
         if name not in self.inventory:
             print("You don't have that.")
             return False
 
-        self.inventory.remove(name)
-        return True
+        current = state["rooms"][state["current"]]
+
+        match name:
+            case "flashlight":
+                if state['current'] == "junction1":
+                    print('YES')
+                    print_animated(f'You light up your newly found flashlight. This will help you see in the dark tunnel...')
+                    print(state['rooms'][state["rooms"][state['current']].exits["west"]].is_locked)
+                    state['rooms'][state["rooms"][state['current']].exits["west"]].is_locked = 'False'
+                else:
+                    print_animated('There are no rooms that would need this.')
+
+            case _:
+                print("Error: item not found")
+                return False

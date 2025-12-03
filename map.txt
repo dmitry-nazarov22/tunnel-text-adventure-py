@@ -21,7 +21,7 @@
 		[crowbar, battery]			    |
 				|				        |
 				|				        |
-	pitch black tunnel   <––––––    track junction  –––––> service room
+	pitch black tunnel   <––––––  track junction  –––––> service room
 										|				[energy drink]
 										|
 										|
