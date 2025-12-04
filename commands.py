@@ -5,10 +5,10 @@ def handle_command(cmd, state):
     if not words:
         return
 
-    verb = words[0]
+    verb = words[0].lower()
 
     if len(words) > 1:
-        body = words[1]
+        body = words[1].lower()
 
     match verb:
         case "look":
@@ -41,14 +41,18 @@ def move(direction, state):
 
     if direction in room.exits and room.exits[direction]:
         target_room = state["rooms"][room.exits[direction]]
+
         if target_room.is_locked != 'True':
+
             if target_room.is_dark != 'True':
                 state["current"] = room.exits[direction]
                 state["rooms"][state["current"]].look("full")
             else:
                 state["current"] = room.exits[direction]
                 state["rooms"][state["current"]].look("dark")
+
         else:
             print_animated("The door is blocked... Maybe I'll find something that will help me.")
+
     else:
         print_animated("Can't go that way.")
