@@ -91,6 +91,14 @@ class Player:
                     state['rooms']['escape_tunnel'].is_blowable = 'False'
                     return True
 
+            case "detonator":
+                print_animated("You can't use it by itself")
+                return True
+
+            case "dynamite":
+                print_animated("You can't use it by itself")
+                return True
+
             case _:
                 print("Error: item not found")
                 return False
