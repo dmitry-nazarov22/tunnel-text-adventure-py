@@ -50,18 +50,22 @@ def move(direction, state):
     if direction in room.exits and room.exits[direction]:
         target_room = state["rooms"][room.exits[direction]]
 
-        if target_room.is_locked != 'True' and target_room.is_keycard != 'True':
 
-            if target_room.is_dark != 'True':
-                state["current"] = room.exits[direction]
-                if target_room.been_here == "False":
-                    target_room.been_here = "True"
-                    state["rooms"][state["current"]].look("full")
+        if target_room.is_locked != 'True' and target_room.is_keycard != 'True':
+            if target_room.is_blowable != 'True':
+                if target_room.is_dark != 'True':
+                    state["current"] = room.exits[direction]
+                    if target_room.been_here == "False":
+                        target_room.been_here = "True"
+                        state["rooms"][state["current"]].look("full")
+                    else:
+                        state["rooms"][state["current"]].look("short")
                 else:
-                    state["rooms"][state["current"]].look("short")
-            else:
-                state["current"] = room.exits[direction]
-                state["rooms"][state["current"]].look("dark")
+                    state["current"] = room.exits[direction]
+                    state["rooms"][state["current"]].look("dark")
+
+            elif target_room.is_blowable == 'True':
+                print_animated("The door is very big. I need something big to get rid of it")
 
         elif target_room.is_locked == 'True':
             print_animated("The door is blocked... Maybe I'll find something that will help me.")

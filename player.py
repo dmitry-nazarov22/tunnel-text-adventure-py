@@ -67,6 +67,30 @@ class Player:
                 print_animated('There are no rooms that would need this.')
                 return False
 
+            case "c4":
+                all_directions = current.exits
+                for direction in all_directions:
+                    if state['rooms'][state["rooms"][state['current']].exits[direction]].is_blowable == 'True':
+                        print_animated('You place the c4 on the door. And now everything is in my hands.')
+                        self.inventory.remove("c4")
+                        self.inventory.append("remote")
+                        print_animated('I should take the remote from my inventory and blow it.')
+                        return True
+
+                print_animated("I don't want to waste it. I should use it on something bigger...")
+                return False
+
+            case "remote":
+                if state["current"] == 'sealed_door':
+                    print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
+                    print_animated("You blowed yourself up......")
+                    state['running'] = False
+                    return True
+                else:
+                    print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
+                    state['rooms']['escape_tunnel'].is_blowable = 'False'
+                    return True
+
             case _:
                 print("Error: item not found")
                 return False
@@ -76,11 +100,11 @@ class Player:
             print("You don't have that.")
             return False
 
-        if (item1 == "pump" and item2 == "fuse") or (item1 == "fuse" and item2 == "pump"):
-            self.inventory.remove("pump")
-            self.inventory.remove("fuse")
-            self.inventory.append("booster")
-            print_animated(f'Combined {item1} and {item2} into a booster!')
+        if (item1 == "detonator" and item2 == "dynamite") or (item1 == "dynamite" and item2 == "detonator"):
+            self.inventory.remove("detonator")
+            self.inventory.remove("dynamite")
+            self.inventory.append("c4")
+            print_animated(f'Combined {item1} and {item2} into a c4!')
             return True
 
 
