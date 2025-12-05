@@ -7,8 +7,9 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "north": "tunnel1" },
-      "items": ["flashlight"]
+      "items": ["flashlight", "keycard"]
     },
 
     "tunnel1": {
@@ -18,6 +19,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "entrance",
         "north": "junction1"
@@ -32,6 +34,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "tunnel1",
         "west": "dark_tunnel",
@@ -48,6 +51,7 @@
       "desc_dark": "You can't see anything without light. Something breathes.",
       "is_locked": "False",
       "is_dark": "True",
+      "is_keycard": "False",
       "exits": {
         "east": "junction1",
         "north": "storage_dark"
@@ -62,6 +66,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "south": "dark_tunnel" },
       "items": ["crowbar", "battery"]
     },
@@ -73,6 +78,7 @@
       "desc_dark": "None",
       "is_locked": "True",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "west": "junction1" },
       "items": ["energy_drink"]
     },
@@ -84,6 +90,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "True",
       "exits": {
         "south": "junction1",
         "north": "station_corridor",
@@ -99,6 +106,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "station_a",
         "east": "locker_room",
@@ -114,6 +122,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "west": "station_corridor" },
       "items": ["old_key", "protein_bar"]
     },
@@ -125,6 +134,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "station_corridor",
         "north": "train_car1",
@@ -140,6 +150,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "south": "station_b", "north": "train_car2" },
       "items": []
     },
@@ -151,6 +162,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "south": "train_car1", "north": "train_car3" },
       "items": []
     },
@@ -162,6 +174,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "south": "train_car2" },
       "items": ["adrenaline"]
     },
@@ -173,6 +186,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "east": "station_b",
         "north": "generator_room"
@@ -187,6 +201,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "maintenance_shaft",
         "north": "power_control"
@@ -201,6 +216,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": { "south": "generator_room" },
       "items": ["station_keycard"]
     },
@@ -212,6 +228,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "west": "station_a",
         "north": "old_platform"
@@ -226,6 +243,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "side_tunnel",
         "north": "sealed_door"
@@ -240,6 +258,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {
         "south": "old_platform",
         "north": "escape_tunnel"
@@ -254,6 +273,7 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
+      "is_keycard": "False",
       "exits": {},
       "items": []
     }

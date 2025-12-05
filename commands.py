@@ -42,7 +42,7 @@ def move(direction, state):
     if direction in room.exits and room.exits[direction]:
         target_room = state["rooms"][room.exits[direction]]
 
-        if target_room.is_locked != 'True':
+        if target_room.is_locked != 'True' and target_room.is_keycard != 'True':
 
             if target_room.is_dark != 'True':
                 state["current"] = room.exits[direction]
@@ -51,8 +51,10 @@ def move(direction, state):
                 state["current"] = room.exits[direction]
                 state["rooms"][state["current"]].look("dark")
 
-        else:
+        elif target_room.is_locked == 'True':
             print_animated("The door is blocked... Maybe I'll find something that will help me.")
+        elif target_room.is_keycard == 'True':
+            print_animated("The door has a keycard lock on it... Maybe I'll find one that will open it.")
 
     else:
         print_animated("Can't go that way.")

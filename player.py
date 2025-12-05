@@ -47,6 +47,17 @@ class Player:
                 print_animated('There are no rooms that would need this.')
                 return False
 
+            case "keycard":
+                all_directions = current.exits
+                for direction in all_directions:
+                    if state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard == 'True':
+                        print_animated(f'You try your keycard and... ... ... IT WORKS! Green light lit up and the door opened.')
+                        state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard = 'False'
+                        return True
+
+                print_animated('There are no rooms that would need this.')
+                return False
+
             case _:
                 print("Error: item not found")
                 return False
