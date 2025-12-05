@@ -1,8 +1,9 @@
 from ui import print_animated
 
 class Room:
-    def __init__(self, name, desc_full, desc_short, desc_dark, is_keycard, is_locked, is_dark, exits, items=None):
+    def __init__(self, name, been_here, desc_full, desc_short, desc_dark, is_keycard, is_locked, is_dark, exits, items=None):
         self.name = name
+        self.been_here = been_here
         self.desc_full = desc_full
         self.desc_short = desc_short
         self.desc_dark = desc_dark

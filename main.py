@@ -15,6 +15,8 @@ def main():
 
     rooms[state["current"]].look('full')
 
+    rooms[state["current"]].been_here = "True"
+
     while state["running"]:
         command = input("> ").strip()
         handle_command(command, state)

@@ -9,6 +9,7 @@ def load_world():
     for room_id, room_data in data["rooms"].items():
         rooms[room_id] = Room(
             name = room_data["name"],
+            been_here = room_data["been_here"],
             desc_full = room_data["desc_full"],
             desc_short = room_data["desc_short"],
             desc_dark = room_data["desc_dark"],

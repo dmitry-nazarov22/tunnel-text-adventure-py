@@ -46,7 +46,11 @@ def move(direction, state):
 
             if target_room.is_dark != 'True':
                 state["current"] = room.exits[direction]
-                state["rooms"][state["current"]].look("full")
+                if target_room.been_here == "False":
+                    target_room.been_here = "True"
+                    state["rooms"][state["current"]].look("full")
+                else:
+                    state["rooms"][state["current"]].look("short")
             else:
                 state["current"] = room.exits[direction]
                 state["rooms"][state["current"]].look("dark")

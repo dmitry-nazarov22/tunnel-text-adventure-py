@@ -2,6 +2,7 @@
   "rooms": {
     "entrance": {
       "name": "Collapsed Entrance",
+      "been_here": "False",
       "desc_full": "Cold air. Dust. Broken concrete. A dark tunnel leads north.\n*Where am I?*",
       "desc_short": "A dark tunnel leads north.",
       "desc_dark": "None",
@@ -14,6 +15,7 @@
 
     "tunnel1": {
       "name": "Long Tunnel",
+      "been_here": "False",
       "desc_full": "Metal echoes. Dripping water. Something moves far ahead.",
       "desc_short": "Metal echoes. Dripping water.",
       "desc_dark": "None",
@@ -29,6 +31,7 @@
 
     "junction1": {
       "name": "Track Junction",
+      "been_here": "False",
       "desc_full": "Three paths. Left is darker than night.",
       "desc_short": "Three paths. Left is darker than night.",
       "desc_dark": "None",
@@ -46,6 +49,7 @@
 
     "dark_tunnel": {
       "name": "Pitch Black Tunnel",
+      "been_here": "False",
       "desc_full": "You finally see something. Stains on the walls and as if someone has dragged something heavy on the ground...",
       "desc_short": "You finally see something. Stains on the walls and as if someone has dragged something heavy on the ground...",
       "desc_dark": "You can't see anything without light. Something breathes.",
@@ -61,6 +65,7 @@
 
     "storage_dark": {
       "name": "Maintenance Storage",
+      "been_here": "False",
       "desc_full": "Old tools. Dust. A faint metallic smell.",
       "desc_short": "Old tools. Dust.",
       "desc_dark": "None",
@@ -73,6 +78,7 @@
 
     "service_room1": {
       "name": "Service Room",
+      "been_here": "False",
       "desc_full": "Broken lockers. A smashed radio. Silence.",
       "desc_short": "Broken lockers. A smashed radio.",
       "desc_dark": "None",
@@ -85,6 +91,7 @@
 
     "station_a": {
       "name": "Abandoned Station A",
+      "been_here": "False",
       "desc_full": "Platform lights flicker. Echo feels delayed.",
       "desc_short": "Platform lights flicker. Echo feels delayed.",
       "desc_dark": "None",
@@ -101,6 +108,7 @@
 
     "station_corridor": {
       "name": "Station Corridor",
+      "been_here": "False",
       "desc_full": "Old posters. Scratches on walls. Someone passed recently.",
       "desc_short": "Old posters. Scratches on walls.",
       "desc_dark": "None",
@@ -117,6 +125,7 @@
 
     "locker_room": {
       "name": "Locker Room",
+      "been_here": "False",
       "desc_full": "Rusty lockers. The smell of mold.",
       "desc_short": "Rusty lockers. The smell of mold.",
       "desc_dark": "None",
@@ -129,6 +138,7 @@
 
     "station_b": {
       "name": "Station B",
+      "been_here": "False",
       "desc_full": "Wide platform. A broken train rests silently.",
       "desc_short": "Wide platform. A broken train rests silently.",
       "desc_dark": "None",
@@ -145,6 +155,7 @@
 
     "train_car1": {
       "name": "Train Car 1",
+      "been_here": "False",
       "desc_full": "Seats ripped open. Dark stains on the floor.",
       "desc_short": "Seats ripped open. Dark stains on the floor.",
       "desc_dark": "None",
@@ -157,6 +168,7 @@
 
     "train_car2": {
       "name": "Train Car 2",
+      "been_here": "False",
       "desc_full": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
       "desc_short": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
       "desc_dark": "None",
@@ -169,6 +181,7 @@
 
     "train_car3": {
       "name": "Train Car 3",
+      "been_here": "False",
       "desc_full": "You hear breathing for a second. Then it stops.",
       "desc_short": "You hear breathing for a second. Then it stops.",
       "desc_dark": "None",
@@ -181,6 +194,7 @@
 
     "maintenance_shaft": {
       "name": "Maintenance Shaft",
+      "been_here": "False",
       "desc_full": "Narrow path. Water dripping. Rust everywhere.",
       "desc_short": "Narrow path. Water dripping. Rust everywhere.",
       "desc_dark": "None",
@@ -196,6 +210,7 @@
 
     "generator_room": {
       "name": "Generator Room",
+      "been_here": "False",
       "desc_full": "The engine is dead. Tools scattered around.",
       "desc_short": "The engine is dead. Tools scattered around.",
       "desc_dark": "None",
@@ -211,6 +226,7 @@
 
     "power_control": {
       "name": "Power Control Room",
+      "been_here": "False",
       "desc_full": "Panels blinking faintly. Something was repaired recently.",
       "desc_short": "Panels blinking faintly. Something was repaired recently.",
       "desc_dark": "None",
@@ -223,6 +239,7 @@
 
     "side_tunnel": {
       "name": "Side Tunnel",
+      "been_here": "False",
       "desc_full": "Loose wires. A weak humming noise somewhere far ahead.",
       "desc_short": "Loose wires. A weak humming noise somewhere far ahead.",
       "desc_dark": "None",
@@ -238,6 +255,7 @@
 
     "old_platform": {
       "name": "Old Platform",
+      "been_here": "False",
       "desc_full": "Dusty. Old metro signs. Something ran across the tracks.",
       "desc_short": "Dusty. Old metro signs. Something ran across the tracks.",
       "desc_dark": "None",
@@ -253,6 +271,7 @@
 
     "sealed_door": {
       "name": "Sealed Door",
+      "been_here": "False",
       "desc_full": "Massive locked door. Requires keycard.",
       "desc_short": "Massive locked door. Requires keycard.",
       "desc_dark": "None",
@@ -268,6 +287,7 @@
 
     "escape_tunnel": {
       "name": "Escape Tunnel",
+      "been_here": "False",
       "desc_full": "Fresh air. The exit must be close.",
       "desc_short": "Fresh air. The exit must be close.",
       "desc_dark": "None",
