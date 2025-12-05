@@ -24,5 +24,6 @@ class Room:
         else:
             print('ERROR: world.json contains wrong format of description.')
 
-        if self.items:
-            print_animated(f'You see {self.items} laying on the floor')
+        if self.is_dark == "False":
+            if self.items:
+                print_animated(f'You see {self.items} laying on the floor')

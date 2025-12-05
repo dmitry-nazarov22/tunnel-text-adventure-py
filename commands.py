@@ -28,6 +28,9 @@ def handle_command(cmd, state):
         case "take":
             state["player"].add_item(body1, state["rooms"][state["current"]])
 
+        case "drop":
+            state["player"].drop_item(body1, state["rooms"][state["current"]])
+
         case "use":
             state["player"].use_item(state, body1)
 

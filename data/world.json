@@ -60,7 +60,7 @@
         "east": "junction1",
         "north": "storage_dark"
       },
-      "items": []
+      "items": ["scrap"]
     },
 
     "storage_dark": {

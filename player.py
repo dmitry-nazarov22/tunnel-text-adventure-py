@@ -14,6 +14,14 @@ class Player:
         else:
             print("No such items around.")
 
+    def drop_item(self, name, room):
+        if name in self.inventory:
+            print_animated(f"You dropped {name}.")
+            self.inventory.remove(name)
+            room.items.append(name)
+        else:
+            print("No such items around.")
+
     def show_inventory(self):
         if self.inventory:
             print("You carry:", ", ".join(self.inventory))
