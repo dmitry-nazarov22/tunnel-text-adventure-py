@@ -10,7 +10,7 @@
       "is_dark": "False",
       "is_keycard": "False",
       "exits": { "north": "tunnel1" },
-      "items": ["flashlight", "keycard"]
+      "items": ["flashlight", "keycard", "fuse", "pump"]
     },
 
     "tunnel1": {

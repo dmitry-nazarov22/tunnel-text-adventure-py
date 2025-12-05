@@ -31,3 +31,6 @@
 								collapsed entrance
 			                        [flashlight]
 			                           START
+
+
+   [wires, control chip, battery, metal scrap, plastic casing, gasmask, adrenaline, energy drink, keycard, protein bar]

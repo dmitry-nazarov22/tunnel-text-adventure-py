@@ -8,7 +8,9 @@ def handle_command(cmd, state):
     verb = words[0].lower()
 
     if len(words) > 1:
-        body = words[1].lower()
+        body1 = words[1].lower()
+    if len(words) > 2:
+        body2 = words[2].lower()
 
     match verb:
         case "look":
@@ -18,16 +20,19 @@ def handle_command(cmd, state):
             if len(words) < 2:
                 print("Go where?")
                 return
-            move(body, state)
+            move(body1, state)
 
         case "inventory":
             state["player"].show_inventory()
 
         case "take":
-            state["player"].add_item(body, state["rooms"][state["current"]])
+            state["player"].add_item(body1, state["rooms"][state["current"]])
 
         case "use":
-            state["player"].use_item(state, body)
+            state["player"].use_item(state, body1)
+
+        case "combine":
+            state["player"].craft_item(body1, body2)
 
         case "quit":
             state["running"] = False

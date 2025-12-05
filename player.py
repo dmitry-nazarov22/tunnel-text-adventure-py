@@ -53,6 +53,7 @@ class Player:
                     if state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard == 'True':
                         print_animated(f'You try your keycard and... ... ... IT WORKS! Green light lit up and the door opened.')
                         state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard = 'False'
+                        self.inventory.remove("keycard")
                         return True
 
                 print_animated('There are no rooms that would need this.')
@@ -61,3 +62,17 @@ class Player:
             case _:
                 print("Error: item not found")
                 return False
+
+    def craft_item(self, item1, item2):
+        if item1 not in self.inventory or item2 not in self.inventory:
+            print("You don't have that.")
+            return False
+
+        if (item1 == "pump" and item2 == "fuse") or (item1 == "fuse" and item2 == "pump"):
+            self.inventory.remove("pump")
+            self.inventory.remove("fuse")
+            self.inventory.append("booster")
+            print_animated(f'Combined {item1} and {item2} into a booster!')
+            return True
+
+
