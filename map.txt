@@ -1,36 +1,44 @@
 
 
-									train car 3
-									[adrenaline]
-		power control room              |
-		[station keycard]				|
-				|					train car 2
-				|						|
-		  generator room                |
-			  [fuse]				train car 1             escape tunnel
-			    |                       |                        END
-				| 					    |                         |
-				|					    |                         |
-		maintenance shaft   <––––––  station B               sealed door
-										|                         |
-										|                         |
-			locker room   <––––––  station corridor            old platform
-		 [old key, protein bar]		    |                         |
-										|                         |
-		maintenance storage           station A    –––––––>    side tunnel
-		[crowbar, battery]			    |
-				|				        |
-				|				        |
-	pitch black tunnel   <––––––  track junction  –––––> service room
-										|				[energy drink]
-										|
-										|
-									long tunnel
-										|
-										|
-								collapsed entrance
-			                        [flashlight]
-			                           START
+																	 dead end
+																		|
+																		|
+																	train car 3               archive room
+																	[dynamite]                  [notes]
+										power control room              |                          |
+										[station keycard]				|                          |
+												|					train car 2     ––––––>  operator booth
+												|				   [adrenaline]                [log_disc]
+												|						|
+										  generator room                |
+												|				    train car 1                                      escape tunnel
+												|                       |                                                 END
+												| 					    |                                                  |
+												|					    |                                                  |
+	     first aid room   <––––––––    maintenance shaft   <––––––  station B                                         sealed door
+												|						|                                                  |
+												|						|                                                  |
+							           ventilation room			    	|                                                  |
+																		|                                                  |
+																		|                                                  |
+																		|                                                  |
+										locker room   <––––––  station corridor               lift shaft   <–––––––  old platform    –––––––> communication room
+										[protein bar]		            |                                                  |
+																		|                                                  |
+										maintenance storage          station A     –––––––––––––––––––––––––––––>     side tunnel
+											[crowbar]	      		    |
+												|				        |
+												|				        |
+				chamber room  <––––––– pitch black tunnel <––––––  track junction  –––––> service room
+																		|				[energy drink]
+																		|
+																		|
+																	long tunnel
+																	[flashlight]
+																		|
+																		|
+															    collapsed entrance
+																      START
 
 
    [wires, control chip, battery, metal scrap, plastic casing, gasmask, adrenaline, energy drink, keycard, protein bar]

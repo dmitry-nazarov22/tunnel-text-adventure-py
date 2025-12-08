@@ -3,8 +3,8 @@
     "entrance": {
       "name": "Collapsed Entrance",
       "been_here": "False",
-      "desc_full": "Cold air. Dust. Broken concrete. A dark tunnel leads north.\n*Where am I?*",
-      "desc_short": "A dark tunnel leads north.",
+      "desc_full": "The cold air presses against my skin like a warning. Dust moves even when I stand still. \nLong cracks run along the walls, and the silence seems staged. But I'm alone here, right..? \nThe dark tunnel stretches north, seemingly pulling me...",
+      "desc_short": "Cold air. Dust moves even when you stand still.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -17,8 +17,8 @@
     "tunnel1": {
       "name": "Long Tunnel",
       "been_here": "False",
-      "desc_full": "Metal echoes. Dripping water. Something moves far ahead.",
-      "desc_short": "Metal echoes. Dripping water.",
+      "desc_full": "The tunnel stretches forward. Metallic echoes bounce between the walls, returning a heartbeat slower than they should... \nlike they're hesitating. Water drips from rusted pipes overhead, but every now and then another sound slips between the drops: a breath pulled too sharply, a faint scrape of metal. \nThe air grows colder the deeper you look.",
+      "desc_short": "Echoes come late. Water drips, but as if something else listens.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -34,8 +34,8 @@
     "junction1": {
       "name": "Track Junction",
       "been_here": "False",
-      "desc_full": "Three paths. Left is darker than night.",
-      "desc_short": "Three paths. Left is darker than night.",
+      "desc_full": "Three paths divide here. The ground has marks as if something has been dragged here, fresh enough that dust hasn't settled into them yet. \nThe air carries a faint smell of old metal. The western tunnel is darker than night. The eastern door has a 'Service' sign above.\n For a moment, the stillness feels poised, as if the whole junction expects you to follow the wrong path.",
+      "desc_short": "Three paths. Dust disturbed by recent movement.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -53,25 +53,43 @@
     "dark_tunnel": {
       "name": "Pitch Black Tunnel",
       "been_here": "False",
-      "desc_full": "You finally see something. Stains on the walls and as if someone has dragged something heavy on the ground...",
-      "desc_short": "You finally see something. Stains on the walls and as if someone has dragged something heavy on the ground...",
-      "desc_dark": "You can't see anything without light. Something breathes.",
+      "desc_full": "Light pushes against the darkness here but barely holds. The walls emerge one section at a time: \nsmeared stains, scratches, and long, dragging marks that cut across the floor. The air is tight and stale, clinging to your throat. Every sound you make feels muffled, as if the tunnel is swallowing your presence. \nYou get the constant impression that something stands just outside the reach of your light, waiting for the moment you turn it away.",
+      "desc_short": "Scratches. Drag marks. Darkness clings to you.",
+      "desc_dark": "**I can't see anything...** In complete darkness, the air seems to stand still. Rustling sounds nearby are too steady, as if someone isn't breathing, but listening.",
       "is_locked": "False",
       "is_dark": "True",
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": {
         "east": "junction1",
-        "north": "storage_dark"
+        "north": "storage_dark",
+        "west": "chamber_room"
       },
       "items": ["scrap"]
     },
 
+    "chamber_room": {
+      "name": "Chamber",
+      "been_here": "False",
+      "desc_full": "Circular room. Marks on the floor look recent. \nThe sound of my breath seems to drift upward, as if the room's dome is higher than it should be.",
+      "desc_short": "Circular room with strange marks.",
+      "desc_dark": "**I can't see anything. It's too dark.** The darkness here is thicker than the air.",
+      "is_locked": "False",
+      "is_dark": "True",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "east": "dark_tunnel"
+      },
+      "items": ["unknown_sample"]
+  },
+
+
     "storage_dark": {
       "name": "Maintenance Storage",
       "been_here": "False",
-      "desc_full": "Old tools. Dust. A faint metallic smell.",
-      "desc_short": "Old tools. Dust.",
+      "desc_full": "The cramped room smells of rust, dust, and cold metal. \nShelves bow under the weight of old tools, but many pieces aren't where they should be: a wrench lies on the floor, a screwdriver sits balanced on the edge of a table, a box is cracked open like someone searched through it in a hurry. \nDust on the ground shows a single set of footprints that don't belong to you. \nThe metallic scent grows stronger the longer I remain here.",
+      "desc_short": "Old tools scattered. Footprints you didn't leave.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -84,8 +102,8 @@
     "service_room1": {
       "name": "Service Room",
       "been_here": "False",
-      "desc_full": "Broken lockers. A smashed radio. Silence.",
-      "desc_short": "Broken lockers. A smashed radio.",
+      "desc_full": "Broken lockers gape open. Papers lie torn on the ground. \nA smashed radio sits in a corner, its speaker buzzing with faint static that rises and falls in uneven pulses. \nThe feeling of intrusion hangs heavy here. A faint impression in the dust near the wall looks like the imprint of a knee, as if someone crouched there, listening.",
+      "desc_short": "Broken lockers. Radio breathes static on its own.",
       "desc_dark": "None",
       "is_locked": "True",
       "is_dark": "False",
@@ -98,8 +116,8 @@
     "station_a": {
       "name": "Abandoned Station A",
       "been_here": "False",
-      "desc_full": "Platform lights flicker. Echo feels delayed.",
-      "desc_short": "Platform lights flicker. Echo feels delayed.",
+      "desc_full": "Flickering lights. Every second or two the world freezes in darkness before a dim bulb ignites again. \nTiles crack under your feet, echoing down the empty station far longer than they should. Sometimes you hear a second echo overlapping yours... slower. \n Eastern corridor is blocked by a door with an electronic lock.",
+      "desc_short": "Flickering lights. Tiles crack under your feet",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -116,7 +134,7 @@
     "station_corridor": {
       "name": "Station Corridor",
       "been_here": "False",
-      "desc_full": "Old posters. Scratches on walls. Someone passed recently.",
+      "desc_full": "The corridor stretches ahead, lined with posters where the faces have been ripped off. \nDeep scratches run across the walls, not random but almost directional, pointing north. \nA faint trail of cold air moves through the corridor, too steady to be natural, and each time it brushes your neck, it feels like fingers.",
       "desc_short": "Old posters. Scratches on walls.",
       "desc_dark": "None",
       "is_locked": "False",
@@ -134,8 +152,8 @@
     "locker_room": {
       "name": "Locker Room",
       "been_here": "False",
-      "desc_full": "Rusty lockers. The smell of mold.",
-      "desc_short": "Rusty lockers. The smell of mold.",
+      "desc_full": "Rusty lockers tower above you, their doors hanging loose. Some lockers are slightly open, revealing glimpses of nothing... \nA few items lie on the benches as if someone set them down and simply… never picked them up.",
+      "desc_short": "Rusty lockers tower above you, their doors hanging loose.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -148,7 +166,7 @@
     "station_b": {
       "name": "Station B",
       "been_here": "False",
-      "desc_full": "Wide platform. A broken train rests silently.",
+      "desc_full": "A wide platform opens into eerie stillness. The broken train rests on the tracks like it has been there forever, its windows reflecting nothing. \nThe metal hull creaks occasionally, the kind of sound a cooling machine might make… except it's been dead for years. \nI don't even know if I should step in. A lonely corridor appears up on the eastern side as I come closer.",
       "desc_short": "Wide platform. A broken train rests silently.",
       "desc_dark": "None",
       "is_locked": "False",
@@ -166,8 +184,8 @@
     "train_car1": {
       "name": "Train Car 1",
       "been_here": "False",
-      "desc_full": "Seats ripped open. Dark stains on the floor.",
-      "desc_short": "Seats ripped open. Dark stains on the floor.",
+      "desc_full": "Seats look surprisingly clean. The whole inside is alike. The darkness and dust became so familiar that cleaness feels disturbing. \nWhen you stand still, the metal beneath your feet hums faintly, as though the car remembers motion.",
+      "desc_short": "Seats look surprisingly clean. The whole inside is alike.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -180,36 +198,89 @@
     "train_car2": {
       "name": "Train Car 2",
       "been_here": "False",
-      "desc_full": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
-      "desc_short": "Cold air. Something scratched on a window: 'DON'T FOLLOW'.",
+      "desc_full": "Cold air blows through the cracked window, carrying a faint metallic taste. On the glass, the message “DON'T FOLLOW” is carved deeply, \nwith lines jagged enough to suggest hurried, trembling hands. The scratches glisten slightly, as if freshly made. \nThe entire car feels abandoned mid-moment. Almost welcoming.",
+      "desc_short": "Cold air. Scratches on a window: 'DON'T FOLLOW'.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
       "is_keycard": "False",
       "is_blowable": "False",
-      "exits": { "south": "train_car1", "north": "train_car3" },
+      "exits": {
+        "south": "train_car1",
+        "north": "train_car3",
+        "east": "operator_booth"
+      },
       "items": []
     },
 
     "train_car3": {
       "name": "Train Car 3",
       "been_here": "False",
-      "desc_full": "You hear breathing for a second. Then it stops.",
-      "desc_short": "You hear breathing for a second. Then it stops.",
+      "desc_full": "As you enter, a sharp breath echoes around you... too close, too real... then vanishes with unnatural precision. \nThe air is warmer here. The seats are untouched, which somehow makes it worse. \nThe walls are faintly fogged with condensation, yet you feel no humidity.",
+      "desc_short": "Warm air. Breathing stops when you enter.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
       "is_keycard": "False",
       "is_blowable": "False",
-      "exits": { "south": "train_car2" },
+      "exits": { "south": "train_car2", "north": "dead_end"},
       "items": ["adrenaline"]
+    },
+
+    "dead_end": {
+      "name": "Dead end",
+      "been_here": "False",
+      "desc_full": "Crawled out of the last train car to see nothing. The tunnel is collapsed and there's nowhere to go.",
+      "desc_short": "The tunnel is collapsed and there's nowhere to go.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "south": "train_car3"
+      },
+      "items": []
+    },
+
+        "operator_booth": {
+      "name": "Operator Booth",
+      "been_here": "False",
+      "desc_full": "A big amount of black screens. One is clearly torn out. A lot of paper notes around.",
+      "desc_short": "A big amount of black screens. One is clearly torn out. A lot of paper notes around.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "west": "train_car2",
+        "north": "archive_room"
+      },
+      "items": ["log_disc"]
+    },
+
+    "archive_room": {
+      "name": "Archive",
+      "been_here": "False",
+      "desc_full": "Stacks of old folders. Some are scattered across the floor.",
+      "desc_short": "Stacks of old folders.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "south": "operator_booth"
+      },
+      "items": ["notes"]
     },
 
     "maintenance_shaft": {
       "name": "Maintenance Shaft",
       "been_here": "False",
-      "desc_full": "Narrow path. Water dripping. Rust everywhere.",
-      "desc_short": "Narrow path. Water dripping. Rust everywhere.",
+      "desc_full": "The shaft narrows around, metal walls close enough to brush your shoulders. Rust spreads in patterns that resemble veins, \nbranching out like the place itself is corroding from within. Every time you turn your back to the entrance, a sharp awareness crawls up your spine. \nThe sense of eyes resting on you.",
+      "desc_short": "Tight shaft. Rust everywhere.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -217,7 +288,41 @@
       "is_blowable": "False",
       "exits": {
         "east": "station_b",
-        "north": "generator_room"
+        "north": "generator_room",
+        "west": "first_aid_room",
+        "south": "ventilation_room"
+      },
+      "items": []
+    },
+
+    "ventilation_room": {
+      "name": "Ventilation room",
+      "been_here": "False",
+      "desc_full": "Now I understand why it is so hard to breath. The ventilation systems don't work. It shouldn't surprise me anymore.",
+      "desc_short": "The ventilation systems don't work.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "north": "maintenance_shaft"
+      },
+      "items": []
+    },
+
+    "first_aid_room": {
+      "name": "Escape Tunnel",
+      "been_here": "False",
+      "desc_full": "Room looks like it was turned upside down. As if someone has searched for something here. What a mess.",
+      "desc_short": "Room looks like it was turned upside down. What a mess.",
+      "desc_dark": "**Can't see nothing here...** Something sticky under my feet. The smell is alarming.",
+      "is_locked": "False",
+      "is_dark": "True",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "east": "maintenance_shaft"
       },
       "items": []
     },
@@ -225,7 +330,7 @@
     "generator_room": {
       "name": "Generator Room",
       "been_here": "False",
-      "desc_full": "The engine is dead. Tools scattered around.",
+      "desc_full": "The generator stands like a beast, its metal frame exposed and wires hanging. \nTools lie scattered around it, but not carelessly. Some bolts appear freshly loosened, dust wiped from specific parts of the engine.",
       "desc_short": "The engine is dead. Tools scattered around.",
       "desc_dark": "None",
       "is_locked": "False",
@@ -242,7 +347,7 @@
     "power_control": {
       "name": "Power Control Room",
       "been_here": "False",
-      "desc_full": "Panels blinking faintly. Something was repaired recently.",
+      "desc_full": "The panels blink weakly, their lights flickering in uneven patterns. \nSmudged fingerprints cover the surfaces, and some switches flipped. \nThe air vibrates with the faint hum of electricity struggling to stay alive.",
       "desc_short": "Panels blinking faintly. Something was repaired recently.",
       "desc_dark": "None",
       "is_locked": "False",
@@ -256,8 +361,8 @@
     "side_tunnel": {
       "name": "Side Tunnel",
       "been_here": "False",
-      "desc_full": "Loose wires. A weak humming noise somewhere far ahead.",
-      "desc_short": "Loose wires. A weak humming noise somewhere far ahead.",
+      "desc_full": "Another tunnel... Loose wires sway above you, though the air is perfectly still. \nThe deeper you look, the more the sound shifts, moving position like it's circling you.",
+      "desc_short": "Loose wires. A long tunnel ahead...",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -273,8 +378,8 @@
     "old_platform": {
       "name": "Old Platform",
       "been_here": "False",
-      "desc_full": "Dusty. Old metro signs. Something ran across the tracks.",
-      "desc_short": "Dusty. Old metro signs. Something ran across the tracks.",
+      "desc_full": "Old metro signs hang crooked, some with letters scraped off in long strokes. \nI think I heard some noises across the tracks. But now my path splits in three ways... again.",
+      "desc_short": "Dusty. Old metro signs. Three ways to go.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -282,16 +387,50 @@
       "is_blowable": "False",
       "exits": {
         "south": "side_tunnel",
-        "north": "sealed_door"
+        "north": "sealed_door",
+        "east": "communication_room",
+        "west": "lift_shaft"
       },
       "items": []
+    },
+
+    "communication_room": {
+      "name": "Communication room",
+      "been_here": "False",
+      "desc_full": "Light is flickering. A table with radio equipment stays in the middle. The battery cover is torn out.",
+      "desc_short": "Light is flickering. A table with radio equipment stays in the middle. The battery cover is torn out.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "west": "old_platform"
+      },
+      "items": []
+    },
+
+    "lift_shaft": {
+      "name": "Lift Shaft",
+      "been_here": "False",
+      "desc_full": "An empty shaft. A broken cable hangs into the darkness. The darkness descends endlessly.",
+      "desc_short": "An empty lift shaft.",
+      "desc_dark": "None",
+      "is_locked": "False",
+      "is_dark": "False",
+      "is_keycard": "False",
+      "is_blowable": "False",
+      "exits": {
+        "east": "old_platform"
+      },
+      "items": ["scrap"]
     },
 
     "sealed_door": {
       "name": "Sealed Door",
       "been_here": "False",
-      "desc_full": "Massive locked door. Requires keycard.",
-      "desc_short": "Massive locked door. Requires keycard.",
+      "desc_full": "A massive sealed door blocks the path forward, its surface scarred with desperate scratches. \nThe lock mechanism bears scuff marks, as though someone tried again and again to force their way through. \nWhen you place your hand on the metal, it feels faintly warm. A low vibration hums from deep behind it, steady and alive.",
+      "desc_short": "Huge door. Scratched, warm, humming faintly.",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -308,7 +447,7 @@
       "name": "Escape Tunnel",
       "been_here": "False",
       "desc_full": "Fresh air. The exit must be close.",
-      "desc_short": "Fresh air. The exit must be close.",
+      "desc_short": "None",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
