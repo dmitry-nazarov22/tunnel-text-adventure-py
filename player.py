@@ -92,20 +92,20 @@ class Player:
                     return True
 
             case "adrenaline":
-                if self.energy <= 90:
+                if self.energy <= 50:
                     self.inventory.remove("adrenaline")
                     print_animated(state["items"][name].use_msg)
-                    self.energy += 10
+                    self.energy += 50
                     return True
 
                 print_animated(state["items"][name].error_msg)
                 return False
 
             case "soda":
-                if self.energy <= 95:
-                    self.inventory.remove("adrenaline")
+                if self.energy <= 80:
+                    self.inventory.remove("soda")
                     print_animated(state["items"][name].use_msg)
-                    self.energy += 5
+                    self.energy += 20
                     return True
 
                 print_animated(state["items"][name].error_msg)

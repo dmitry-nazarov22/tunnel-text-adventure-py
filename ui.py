@@ -64,5 +64,5 @@ def print_game_over(state):
         """
         slow_print(ascii_art, 0.002)
 
-    print_animated(f'\n\n\n        SCORE:               {state["player"].score}\n\n\n')
+    print_animated(f'\n\n\nScore:               {state["player"].score}\n\n\n')
 
