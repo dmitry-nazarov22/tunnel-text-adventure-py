@@ -1,4 +1,4 @@
-from ui import print_animated
+from ui import print_animated, print_block
 
 class Room:
     def __init__(self, name, been_here, desc_full, desc_short, desc_dark, is_keycard, is_blowable, is_locked, is_dark, exits, items=None):
@@ -15,16 +15,18 @@ class Room:
         self.items = items or []
 
     def look(self, desc_id):
-        print_animated(self.name)
+        print("\n" + self.name + "\n")
         if desc_id == 'full':
-            print_animated(self.desc_full)
+            print_block(self.desc_full)
         elif desc_id == 'short':
-            print_animated(self.desc_short)
+            print_block(self.desc_short)
         elif desc_id == 'dark':
-            print_animated(self.desc_dark)
+            print_block(self.desc_dark)
         else:
             print('ERROR: world.json contains wrong format of description.')
 
         if self.is_dark == "False":
             if self.items:
-                print_animated(f'You see {self.items} laying on the floor')
+                items = "", ", ".join(self.items)
+                print_animated("You see some items lyng around:")
+                print_animated(items)
