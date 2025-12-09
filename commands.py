@@ -26,7 +26,7 @@ def handle_command(cmd, state):
             state["player"].show_inventory()
 
         case "take":
-            state["player"].add_item(body1, state["rooms"][state["current"]])
+            state["player"].add_item(state, body1, state["rooms"][state["current"]])
 
         case "drop":
             state["player"].drop_item(body1, state["rooms"][state["current"]])

@@ -1,0 +1,52 @@
+{
+    "items": {
+        "flashlight": {
+            "name": "flashlight",
+            "desc": "A working flashlight in this endless darkness. Now I'll be able to see something.",
+            "use_msg": "You light up your newly found flashlight. This will help you see in here...",
+            "error_msg": "I should preserve battery for a darker room."
+        },
+
+        "crowbar": {
+            "name": "crowbar",
+            "desc": "",
+            "use_msg": "You break the ruined door and can now enter it.",
+            "error_msg": "There are no rooms that would need this."
+        },
+
+        "keycard": {
+            "name": "keycard",
+            "desc": "",
+            "use_msg": "You try your keycard and... ... ... IT WORKS! Green light lit up and the door opened.",
+            "error_msg": "There are no rooms that would need this."
+        },
+
+        "c4": {
+            "name": "c4",
+            "desc": "",
+            "use_msg": "You place the c4 on the door. And now everything is in my hands. \nI should take the remote from my inventory and blow it.",
+            "error_msg": "I don't want to waste it. I should use it on something bigger..."
+        },
+
+        "remote": {
+            "name": "remote",
+            "desc": "",
+            "use_msg": "... ... ... ... does it work?? ... BOOOOOOOM!!!",
+            "error_msg": "... ... ... ... does it work?? ... BOOOOOOOM!!! \nYou blowed yourself up......"
+        },
+
+        "detonator": {
+            "name": "detonator",
+            "desc": "",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself."
+        },
+
+        "dynamite": {
+            "name": "dynamite",
+            "desc": "",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself."
+        }
+    }
+}

@@ -1,13 +1,15 @@
-from world import load_world
+from world import load_world, load_items
 from player import Player
 from commands import handle_command
 from ui import print_animated
 
 def main():
     rooms = load_world()
+    items = load_items()
 
     state = {
     "rooms": rooms,
+    "items": items,
     "current": "entrance",
     "player": Player(),
     "running": True

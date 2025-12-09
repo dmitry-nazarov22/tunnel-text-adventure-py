@@ -1,5 +1,6 @@
 import json
 from room import Room
+from item import Item
 
 def load_world():
     with open("data/world.json", "r", encoding="utf-8") as f:
@@ -21,3 +22,17 @@ def load_world():
             items = room_data["items"]
         )
     return rooms
+
+def load_items():
+    with open("data/items.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    items = {}
+    for item_id, item_data in data["items"].items():
+        items[item_id] = Item(
+            name = item_data["name"],
+            desc = item_data["desc"],
+            use_msg = item_data["use_msg"],
+            error_msg = item_data["error_msg"],
+        )
+    return items

@@ -6,9 +6,10 @@ class Player:
         self.energy = 100
         self.score = 0
 
-    def add_item(self, name, room):
+    def add_item(self, state, name, room):
         if name in room.items:
             print_animated(f"You picked up {name}.")
+            print_animated(state["items"][name].desc)
             self.inventory.append(name)
             room.items.remove(name)
         else:
@@ -38,65 +39,63 @@ class Player:
         match name:
             case "flashlight":
                 if current.is_dark == 'True':
-                    print_animated(f'You light up your newly found flashlight. This will help you see in here...')
+                    print_animated(state["items"][name].use_msg)
                     current.is_dark = 'False'
                     state["rooms"][state["current"]].look("full")
                 else:
-                    print_animated('I should preserve battery for a darker room.')
+                    print_animated(state["items"][name].error_msg)
 
             case "crowbar":
                 all_directions = current.exits
                 for direction in all_directions:
                     if state['rooms'][state["rooms"][state['current']].exits[direction]].is_locked == 'True':
-                        print_animated(f'You break the ruined door and can now enter it.')
+                        print_animated(state["items"][name].use_msg)
                         state['rooms'][state["rooms"][state['current']].exits[direction]].is_locked = 'False'
                         return True
 
-                print_animated('There are no rooms that would need this.')
+                print_animated(state["items"][name].error_msg)
                 return False
 
             case "keycard":
                 all_directions = current.exits
                 for direction in all_directions:
                     if state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard == 'True':
-                        print_animated(f'You try your keycard and... ... ... IT WORKS! Green light lit up and the door opened.')
+                        print_animated(state["items"][name].use_msg)
                         state['rooms'][state["rooms"][state['current']].exits[direction]].is_keycard = 'False'
                         self.inventory.remove("keycard")
                         return True
 
-                print_animated('There are no rooms that would need this.')
+                print_animated(state["items"][name].error_msg)
                 return False
 
             case "c4":
                 all_directions = current.exits
                 for direction in all_directions:
                     if state['rooms'][state["rooms"][state['current']].exits[direction]].is_blowable == 'True':
-                        print_animated('You place the c4 on the door. And now everything is in my hands.')
+                        print_animated(state["items"][name].use_msg)
                         self.inventory.remove("c4")
                         self.inventory.append("remote")
-                        print_animated('I should take the remote from my inventory and blow it.')
                         return True
 
-                print_animated("I don't want to waste it. I should use it on something bigger...")
+                print_animated(state["items"][name].error_msg)
                 return False
 
             case "remote":
                 if state["current"] == 'sealed_door':
                     print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
-                    print_animated("You blowed yourself up......")
                     state['running'] = False
                     return True
                 else:
-                    print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
+                    print_animated(state["items"][name].use_msg)
                     state['rooms']['escape_tunnel'].is_blowable = 'False'
                     return True
 
             case "detonator":
-                print_animated("You can't use it by itself")
+                print_animated(state["items"][name].error_msg)
                 return True
 
             case "dynamite":
-                print_animated("You can't use it by itself")
+                print_animated(state["items"][name].error_msg)
                 return True
 
             case _:
