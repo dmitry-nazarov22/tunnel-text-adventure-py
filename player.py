@@ -83,6 +83,7 @@ class Player:
             case "remote":
                 if state["current"] == 'sealed_door':
                     print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
+                    state["game_msg"] = "blowed_up"
                     state['running'] = False
                     return True
                 else:
@@ -150,6 +151,8 @@ class Player:
         if item1 not in self.inventory or item2 not in self.inventory:
             print("You don't have that.")
             return False
+
+        self.score += 50
 
         if (item1 == "detonator" and item2 == "dynamite") or (item1 == "dynamite" and item2 == "detonator"):
             result = "c4"

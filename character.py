@@ -22,6 +22,7 @@ class Character:
             room.items.remove(self.task_item)
             self.items.append(self.task_item)
             room.characters.remove(self)
+            state["player"].score += 100
 
             return
 

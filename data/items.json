@@ -30,21 +30,21 @@
 
         "remote": {
             "name": "remote",
-            "desc": "",
+            "desc": "I can use this to blow the c4 up!! Just need to make sure to be safe.",
             "use_msg": "... ... ... ... does it work?? ... BOOOOOOOM!!!",
             "error_msg": "... ... ... ... does it work?? ... BOOOOOOOM!!! \nYou blowed yourself up......"
         },
 
         "detonator": {
             "name": "detonator",
-            "desc": "",
+            "desc": "This could come in handy. A detonator for blowing something up from distance.",
             "use_msg": "",
             "error_msg": "You can't use it by itself."
         },
 
         "dynamite": {
             "name": "dynamite",
-            "desc": "",
+            "desc": "Now I need something that will detonate this.",
             "use_msg": "",
             "error_msg": "You can't use it by itself."
         },
