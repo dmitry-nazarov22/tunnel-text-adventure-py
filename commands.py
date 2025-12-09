@@ -37,6 +37,16 @@ def handle_command(cmd, state):
         case "combine":
             state["player"].craft_item(body1, body2)
 
+        case "talk":
+            current_room = state["rooms"][state["current"]]
+
+            if not current_room.characters:
+                print_animated("There's no one here. But I was sure...")
+                return
+
+            for npc in current_room.characters:
+                npc.talk(current_room)
+
         case "quit":
             state["running"] = False
 

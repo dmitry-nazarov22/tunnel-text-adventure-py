@@ -1,0 +1,15 @@
+{
+    "characters": {
+        "mechanist": {
+            "name": "Mechanist",
+            "desc": "A middle-aged man with a backpack full of tools. His clothes are stained with oil, and he constantly wipes grease off his hands with a rag that somehow only gets dirtier. He whistles quietly.",
+            "location": "maintenance_shaft",
+            "msg1": "If you see a wrench with a red handle, don't touch it. Actually — do touch it. Bring it to me.",
+            "msg2": "It's dark here",
+            "msg3": "STOP",
+            "task_msg": "Thank you!",
+            "items": [],
+            "task_item": ""
+        }
+    }
+}

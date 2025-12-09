@@ -1,4 +1,4 @@
-from world import load_world, load_items
+from world import load_world, load_items, load_characters
 from player import Player
 from commands import handle_command
 from ui import print_animated
@@ -6,10 +6,12 @@ from ui import print_animated
 def main():
     rooms = load_world()
     items = load_items()
+    characters = load_characters(rooms)
 
     state = {
     "rooms": rooms,
     "items": items,
+    "characters": characters,
     "current": "entrance",
     "player": Player(),
     "running": True

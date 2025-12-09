@@ -1,7 +1,7 @@
 from ui import print_animated, print_block
 
 class Room:
-    def __init__(self, name, been_here, desc_full, desc_short, desc_dark, is_keycard, is_blowable, is_locked, is_dark, exits, items=None):
+    def __init__(self, name, been_here, desc_full, desc_short, desc_dark, is_keycard, is_blowable, is_locked, is_dark, exits, items, characters):
         self.name = name
         self.been_here = been_here
         self.desc_full = desc_full
@@ -13,6 +13,7 @@ class Room:
         self.is_blowable = is_blowable
         self.exits = exits
         self.items = items or []
+        self.characters = characters
 
     def look(self, desc_id):
         print("\n" + self.name + "\n")
@@ -26,7 +27,11 @@ class Room:
             print('ERROR: world.json contains wrong format of description.')
 
         if self.is_dark == "False":
+            if self.characters:
+                for character in self.characters:
+                    print(f"You notice someone here...")
+                    print_block(character.desc)
             if self.items:
                 items = "", ", ".join(self.items)
-                print_animated("You see some items lyng around:")
+                print_animated("You see some items lying around:")
                 print_animated(items)

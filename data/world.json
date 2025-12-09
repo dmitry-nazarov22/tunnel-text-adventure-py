@@ -11,7 +11,8 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "north": "tunnel1" },
-      "items": ["flashlight", "keycard", "detonator", "dynamite"]
+      "items": ["flashlight", "keycard", "detonator", "dynamite"],
+      "characters": []
     },
 
     "tunnel1": {
@@ -28,7 +29,8 @@
         "south": "entrance",
         "north": "junction1"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "junction1": {
@@ -47,7 +49,8 @@
         "east": "service_room1",
         "north": "station_a"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "dark_tunnel": {
@@ -65,7 +68,8 @@
         "north": "storage_dark",
         "west": "chamber_room"
       },
-      "items": ["scrap"]
+      "items": ["scrap"],
+      "characters": []
     },
 
     "chamber_room": {
@@ -75,13 +79,14 @@
       "desc_short": "Circular room with strange marks.",
       "desc_dark": "**I can't see anything. It's too dark.** The darkness here is thicker than the air.",
       "is_locked": "False",
-      "is_dark": "True",
+      "is_dark": "False",
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": {
         "east": "dark_tunnel"
       },
-      "items": ["unknown_sample"]
+      "items": ["unknown_sample"],
+      "characters": []
   },
 
 
@@ -96,7 +101,8 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "dark_tunnel" },
-      "items": ["crowbar", "battery"]
+      "items": ["crowbar", "battery"],
+      "characters": []
     },
 
     "service_room1": {
@@ -110,7 +116,8 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "west": "junction1" },
-      "items": ["energy_drink"]
+      "items": ["energy_drink"],
+      "characters": []
     },
 
     "station_a": {
@@ -121,14 +128,15 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
-      "is_keycard": "True",
+      "is_keycard": "False",
       "is_blowable": "False",
       "exits": {
         "south": "junction1",
         "north": "station_corridor",
         "east": "side_tunnel"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "station_corridor": {
@@ -143,10 +151,11 @@
       "is_blowable": "False",
       "exits": {
         "south": "station_a",
-        "east": "locker_room",
+        "west": "locker_room",
         "north": "station_b"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "locker_room": {
@@ -159,8 +168,9 @@
       "is_dark": "False",
       "is_keycard": "False",
       "is_blowable": "False",
-      "exits": { "west": "station_corridor" },
-      "items": ["old_key", "protein_bar"]
+      "exits": { "east": "station_corridor" },
+      "items": ["old_key", "protein_bar"],
+      "characters": []
     },
 
     "station_b": {
@@ -178,7 +188,8 @@
         "north": "train_car1",
         "west": "maintenance_shaft"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "train_car1": {
@@ -192,14 +203,15 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "station_b", "north": "train_car2" },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "train_car2": {
       "name": "Train Car 2",
       "been_here": "False",
-      "desc_full": "Cold air blows through the cracked window, carrying a faint metallic taste. On the glass, the message “DON'T FOLLOW” is carved deeply, with lines jagged enough to suggest hurried, trembling hands. The scratches glisten slightly, as if freshly made. The entire car feels abandoned mid-moment. Almost welcoming.",
-      "desc_short": "Cold air. Scratches on a window: 'DON'T FOLLOW'.",
+      "desc_full": "Cold air blows through the cracked window, carrying a faint metallic taste. Door on the eastern side is open. On the glass, the message “DON'T FOLLOW” is carved deeply, with lines jagged enough to suggest hurried, trembling hands. The scratches glisten slightly, as if freshly made. The entire car feels abandoned mid-moment. Almost welcoming.",
+      "desc_short": "Cold air. Scratches on a window: 'DON'T FOLLOW'. Door on the right is open",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -210,7 +222,8 @@
         "north": "train_car3",
         "east": "operator_booth"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "train_car3": {
@@ -224,7 +237,8 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "train_car2", "north": "dead_end"},
-      "items": ["adrenaline"]
+      "items": ["adrenaline"],
+      "characters": []
     },
 
     "dead_end": {
@@ -240,14 +254,15 @@
       "exits": {
         "south": "train_car3"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
         "operator_booth": {
       "name": "Operator Booth",
       "been_here": "False",
-      "desc_full": "A big amount of black screens. One is clearly torn out. A lot of paper notes around.",
-      "desc_short": "A big amount of black screens. One is clearly torn out. A lot of paper notes around.",
+      "desc_full": "A big amount of black screens. One is clearly torn out. A lot of paper notes around. The door to the room on the northern side is wide open.",
+      "desc_short": "A big amount of black screens. One is clearly torn out. A lot of paper notes around. Door on the northern side wide open",
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
@@ -257,7 +272,8 @@
         "west": "train_car2",
         "north": "archive_room"
       },
-      "items": ["log_disc"]
+      "items": ["log_disc"],
+      "characters": []
     },
 
     "archive_room": {
@@ -273,16 +289,17 @@
       "exits": {
         "south": "operator_booth"
       },
-      "items": ["notes"]
+      "items": ["notes"],
+      "characters": []
     },
 
     "maintenance_shaft": {
       "name": "Maintenance Shaft",
       "been_here": "False",
-      "desc_full": "The shaft narrows around, metal walls close enough to brush your shoulders. Rust spreads in patterns that resemble veins, branching out like the place itself is corroding from within. Every time you turn your back to the entrance, a sharp awareness crawls up your spine. The sense of eyes resting on you.",
-      "desc_short": "Tight shaft. Rust everywhere.",
+      "desc_full": "The shaft narrows around, metal walls close enough to brush your shoulders. Rust spreads in patterns that resemble veins, branching out like the place itself is corroding from within. Three rooms accessible from here. Every time you turn your back to the entrance, a sharp awareness crawls up your spine. The sense of eyes resting on you.",
+      "desc_short": "Tight shaft. Rust everywhere. Three rooms accessible from here.",
       "desc_dark": "None",
-      "is_locked": "False",
+      "is_locked": "True",
       "is_dark": "False",
       "is_keycard": "False",
       "is_blowable": "False",
@@ -292,7 +309,8 @@
         "west": "first_aid_room",
         "south": "ventilation_room"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "ventilation_room": {
@@ -308,11 +326,12 @@
       "exits": {
         "north": "maintenance_shaft"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "first_aid_room": {
-      "name": "Escape Tunnel",
+      "name": "First aid",
       "been_here": "False",
       "desc_full": "Room looks like it was turned upside down. As if someone has searched for something here. What a mess.",
       "desc_short": "Room looks like it was turned upside down. What a mess.",
@@ -324,7 +343,8 @@
       "exits": {
         "east": "maintenance_shaft"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "generator_room": {
@@ -341,7 +361,8 @@
         "south": "maintenance_shaft",
         "north": "power_control"
       },
-      "items": ["fuse"]
+      "items": ["fuse"],
+      "characters": []
     },
 
     "power_control": {
@@ -355,7 +376,8 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "generator_room" },
-      "items": ["station_keycard"]
+      "items": ["station_keycard"],
+      "characters": []
     },
 
     "side_tunnel": {
@@ -366,13 +388,14 @@
       "desc_dark": "None",
       "is_locked": "False",
       "is_dark": "False",
-      "is_keycard": "False",
+      "is_keycard": "True",
       "is_blowable": "False",
       "exits": {
         "west": "station_a",
         "north": "old_platform"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "old_platform": {
@@ -391,7 +414,8 @@
         "east": "communication_room",
         "west": "lift_shaft"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "communication_room": {
@@ -407,7 +431,8 @@
       "exits": {
         "west": "old_platform"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "lift_shaft": {
@@ -423,7 +448,8 @@
       "exits": {
         "east": "old_platform"
       },
-      "items": ["scrap"]
+      "items": ["scrap"],
+      "characters": []
     },
 
     "sealed_door": {
@@ -440,7 +466,8 @@
         "south": "old_platform",
         "north": "escape_tunnel"
       },
-      "items": []
+      "items": [],
+      "characters": []
     },
 
     "escape_tunnel": {
@@ -454,7 +481,8 @@
       "is_keycard": "False",
       "is_blowable": "True",
       "exits": {},
-      "items": []
+      "items": [],
+      "characters": []
     }
   }
 }

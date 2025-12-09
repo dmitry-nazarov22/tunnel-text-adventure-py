@@ -1,6 +1,7 @@
 import json
 from room import Room
 from item import Item
+from character import Character
 
 def load_world():
     with open("data/world.json", "r", encoding="utf-8") as f:
@@ -19,7 +20,8 @@ def load_world():
             is_keycard = room_data["is_keycard"],
             is_blowable = room_data["is_blowable"],
             exits = room_data["exits"],
-            items = room_data["items"]
+            items = room_data["items"],
+            characters = room_data["characters"],
         )
     return rooms
 
@@ -36,3 +38,24 @@ def load_items():
             error_msg = item_data["error_msg"],
         )
     return items
+
+def load_characters(rooms):
+    with open("data/characters.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    characters = {}
+    for character_id, character_data in data["characters"].items():
+        characters[character_id] = Character(
+            name = character_data["name"],
+            desc = character_data["desc"],
+            location = character_data["location"],
+            msg1 = character_data["msg1"],
+            msg2 = character_data["msg2"],
+            msg3 = character_data["msg3"],
+            task_msg = character_data["task_msg"],
+            items = character_data["items"],
+            task_item = character_data["task_item"],
+        )
+        current_character = characters[character_id]
+        rooms[current_character.location].characters.append(current_character)
+    return characters

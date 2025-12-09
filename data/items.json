@@ -3,7 +3,7 @@
         "flashlight": {
             "name": "flashlight",
             "desc": "A working flashlight in this endless darkness. Now I'll be able to see something.",
-            "use_msg": "You light up your newly found flashlight. This will help you see in here...",
+            "use_msg": "You light up your flashlight. This will help you see in here...",
             "error_msg": "I should preserve battery for a darker room."
         },
 
