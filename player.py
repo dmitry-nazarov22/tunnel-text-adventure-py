@@ -90,28 +90,92 @@ class Player:
                     state['rooms']['escape_tunnel'].is_blowable = 'False'
                     return True
 
+            case "adrenaline":
+                if self.energy <= 90:
+                    self.inventory.remove("adrenaline")
+                    print_animated(state["items"][name].use_msg)
+                    self.energy += 10
+                    return True
+
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "soda":
+                if self.energy <= 95:
+                    self.inventory.remove("adrenaline")
+                    print_animated(state["items"][name].use_msg)
+                    self.energy += 5
+                    return True
+
+                print_animated(state["items"][name].error_msg)
+                return False
+
             case "detonator":
                 print_animated(state["items"][name].error_msg)
-                return True
+                return False
 
             case "dynamite":
                 print_animated(state["items"][name].error_msg)
-                return True
+                return False
+
+            case "box":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "tools":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "folder":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "notes":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "toolbox":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "logbook":
+                print_animated(state["items"][name].error_msg)
+                return False
 
             case _:
                 print("Error: item not found")
                 return False
 
-    def craft_item(self, item1, item2):
+    def craft_item(self, state, item1, item2):
         if item1 not in self.inventory or item2 not in self.inventory:
             print("You don't have that.")
             return False
 
         if (item1 == "detonator" and item2 == "dynamite") or (item1 == "dynamite" and item2 == "detonator"):
+            result = "c4"
             self.inventory.remove("detonator")
             self.inventory.remove("dynamite")
-            self.inventory.append("c4")
-            print_animated(f'Combined {item1} and {item2} into a c4!')
+            self.inventory.append(result)
+            print_animated(f'Combined {item1} and {item2} into a {result}!')
+            print_animated(state["items"][result].desc)
+            return True
+
+        if (item1 == "box" and item2 == "tools") or (item1 == "tools" and item2 == "box"):
+            result = "toolbox"
+            self.inventory.remove("tools")
+            self.inventory.remove("box")
+            self.inventory.append("toolbox")
+            print_animated(f'Combined {item1} and {item2} into a {result}!')
+            print_animated(state["items"][result].desc)
+            return True
+
+        if (item1 == "notes" and item2 == "folder") or (item1 == "folder" and item2 == "notes"):
+            result = "logbook"
+            self.inventory.remove("notes")
+            self.inventory.remove("folder")
+            self.inventory.append("logbook")
+            print_animated(f'Combined {item1} and {item2} into a {result}!')
+            print_animated(state["items"][result].desc)
             return True
 
 

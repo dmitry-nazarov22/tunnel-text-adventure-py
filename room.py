@@ -35,3 +35,4 @@ class Room:
                 items = "", ", ".join(self.items)
                 print_animated("You see some items lying around:")
                 print_animated(items)
+                print()

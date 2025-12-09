@@ -1,21 +1,26 @@
 
-
 																	 dead end
+																	lost_worker
+																	  [box]
 																		|
 																		|
 																	train car 3               archive room
-																	[dynamite]                  [notes]
+																	    |                      archivist
+																	    |                    [notes, folder]
 										power control room              |                          |
-										[station keycard]				|                          |
+										    [keycard]		     		|                          |
 												|					train car 2     ––––––>  operator booth
-												|				   [adrenaline]                [log_disc]
+												|				    [dynamite]                 [log_disc]
 												|						|
 										  generator room                |
-												|				    train car 1                                      escape tunnel
+											 [tools]			    train car 1                                      escape tunnel
 												|                       |                                                 END
 												| 					    |                                                  |
+												| 					    |                                                  X
 												|					    |                                                  |
-	     first aid room   <––––––––    maintenance shaft   <––––––  station B                                         sealed door
+	     first aid room   <––––––––    maintenance shaft  <–––x–––  station B                                         sealed door
+		   [adrenaline]					    mechanic					|                                                  |
+									            |     					|                                                  |
 												|						|                                                  |
 												|						|                                                  |
 							           ventilation room			    	|                                                  |
@@ -23,14 +28,14 @@
 																		|                                                  |
 																		|                                                  |
 										locker room   <––––––  station corridor               lift shaft   <–––––––  old platform    –––––––> communication room
-										[protein bar]		            |                                                  |
+									        [id]		                |                     [detonator]                  |
 																		|                                                  |
-										maintenance storage          station A     –––––––––––––––––––––––––––––>     side tunnel
+										maintenance storage          station A     –––––––––––––––x–––––––––––––>     side tunnel
 											[crowbar]	      		    |
 												|				        |
 												|				        |
-				chamber room  <––––––– pitch black tunnel <––––––  track junction  –––––> service room
-																		|				[energy drink]
+				chamber room  <––––––– pitch black tunnel <––D–––  track junction  ––x––> service room
+																		|				     [soda]
 																		|
 																		|
 																	long tunnel
@@ -39,6 +44,3 @@
 																		|
 															    collapsed entrance
 																      START
-
-
-   [wires, control chip, battery, metal scrap, plastic casing, gasmask, adrenaline, energy drink, keycard, protein bar]

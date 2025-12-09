@@ -35,7 +35,7 @@ def handle_command(cmd, state):
             state["player"].use_item(state, body1)
 
         case "combine":
-            state["player"].craft_item(body1, body2)
+            state["player"].craft_item(state, body1, body2)
 
         case "talk":
             current_room = state["rooms"][state["current"]]
@@ -45,7 +45,7 @@ def handle_command(cmd, state):
                 return
 
             for npc in current_room.characters:
-                npc.talk(current_room)
+                npc.talk(state, current_room)
 
         case "quit":
             state["running"] = False

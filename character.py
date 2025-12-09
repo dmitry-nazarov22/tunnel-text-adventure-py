@@ -14,19 +14,21 @@ class Character:
 
         self.talk_counter = 0
 
-    def talk(self, room):
+    def talk(self, state, room):
         print("\n" + self.name)
 
         if self.task_item in room.items:
             print_animated(self.task_msg)
             room.items.remove(self.task_item)
             self.items.append(self.task_item)
+            room.characters.remove(self)
+
             return
 
         if self.talk_counter == 0:
             print_animated(self.msg1)
             self.talk_counter += 1
-        elif self.talk_counter < 4:
+        elif self.talk_counter < 2:
             print_animated(self.msg2)
             self.talk_counter += 1
         else:

@@ -11,7 +11,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "north": "tunnel1" },
-      "items": ["flashlight", "keycard", "detonator", "dynamite"],
+      "items": [],
       "characters": []
     },
 
@@ -29,7 +29,7 @@
         "south": "entrance",
         "north": "junction1"
       },
-      "items": [],
+      "items": ["flashlight"],
       "characters": []
     },
 
@@ -68,7 +68,7 @@
         "north": "storage_dark",
         "west": "chamber_room"
       },
-      "items": ["scrap"],
+      "items": [],
       "characters": []
     },
 
@@ -85,7 +85,7 @@
       "exits": {
         "east": "dark_tunnel"
       },
-      "items": ["unknown_sample"],
+      "items": [],
       "characters": []
   },
 
@@ -101,7 +101,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "dark_tunnel" },
-      "items": ["crowbar", "battery"],
+      "items": ["crowbar"],
       "characters": []
     },
 
@@ -116,7 +116,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "west": "junction1" },
-      "items": ["energy_drink"],
+      "items": ["soda"],
       "characters": []
     },
 
@@ -169,7 +169,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "east": "station_corridor" },
-      "items": ["old_key", "protein_bar"],
+      "items": ["id"],
       "characters": []
     },
 
@@ -222,7 +222,7 @@
         "north": "train_car3",
         "east": "operator_booth"
       },
-      "items": [],
+      "items": ["dynamite"],
       "characters": []
     },
 
@@ -237,7 +237,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "train_car2", "north": "dead_end"},
-      "items": ["adrenaline"],
+      "items": [],
       "characters": []
     },
 
@@ -254,7 +254,7 @@
       "exits": {
         "south": "train_car3"
       },
-      "items": [],
+      "items": ["box"],
       "characters": []
     },
 
@@ -272,7 +272,7 @@
         "west": "train_car2",
         "north": "archive_room"
       },
-      "items": ["log_disc"],
+      "items": [],
       "characters": []
     },
 
@@ -289,7 +289,7 @@
       "exits": {
         "south": "operator_booth"
       },
-      "items": ["notes"],
+      "items": ["notes", "folder"],
       "characters": []
     },
 
@@ -343,7 +343,7 @@
       "exits": {
         "east": "maintenance_shaft"
       },
-      "items": [],
+      "items": ["adrenaline"],
       "characters": []
     },
 
@@ -361,7 +361,7 @@
         "south": "maintenance_shaft",
         "north": "power_control"
       },
-      "items": ["fuse"],
+      "items": ["tools"],
       "characters": []
     },
 
@@ -376,7 +376,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "generator_room" },
-      "items": ["station_keycard"],
+      "items": ["keycard"],
       "characters": []
     },
 
@@ -448,7 +448,7 @@
       "exits": {
         "east": "old_platform"
       },
-      "items": ["scrap"],
+      "items": ["detonator"],
       "characters": []
     },
 

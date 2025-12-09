@@ -21,7 +21,8 @@ def main():
 
     rooms[state["current"]].been_here = "True"
 
-    while state["running"]:
+    while state["running"] and state["player"].energy > 0:
+        print(f'Energy: {state["player"].energy}\n')
         command = input("> ").strip()
         handle_command(command, state)
 

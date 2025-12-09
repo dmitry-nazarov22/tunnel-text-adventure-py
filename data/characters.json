@@ -4,12 +4,36 @@
             "name": "Mechanist",
             "desc": "A middle-aged man with a backpack full of tools. His clothes are stained with oil, and he constantly wipes grease off his hands with a rag that somehow only gets dirtier. He whistles quietly.",
             "location": "maintenance_shaft",
-            "msg1": "If you see a wrench with a red handle, don't touch it. Actually — do touch it. Bring it to me.",
-            "msg2": "It's dark here",
-            "msg3": "STOP",
-            "task_msg": "Thank you!",
+            "msg1": "If you see a toolbox with a red handle, don't touch it. Actually — do touch it. Bring it to me.",
+            "msg2": "That toolbox. Did you find it?",
+            "msg3": "I would love to fix the generator that failed during the emergency... Maybe it was all my fault...",
+            "task_msg": "Thank you! I should say, that combining detonator and dynamite could result in a quite a tool as well. But now I can finally try fixing the generator.\n... He leaves without making too much noise, as if he was avoiding something...",
             "items": [],
-            "task_item": ""
+            "task_item": "toolbox"
+        },
+
+        "lost_worker": {
+            "name": "Lost Worker",
+            "desc": "A pale man in a torn uniform. His eyes track you with slow delay, like he's not fully here. He whispers fragments of instructions that make no sense.",
+            "location": "dead_end",
+            "msg1": "Hmmmmmmm... Mhhhmmm...",
+            "msg2": "You need an ID card to leave! Mmmmmmmmm... I've lost mine...",
+            "msg3": "I've searched everywhere... Maybe I should see in room next to the train... Where my ID could be...",
+            "task_msg": "Oh, you found it! I've searched for it for ages... Now I can finally leave...\nHe starts disappearing, as if he was tearing into small bits and just...",
+            "items": [],
+            "task_item": "id"
+        },
+
+        "archivist": {
+            "name": "Archivist",
+            "desc": "An old person covered in dust, clutching torn folders. Their hands shake as they trace invisible patterns in the air. They ask you questions you don't know how to answer.",
+            "location": "archive_room",
+            "msg1": "Oh, Hello. I rarely have any visitors. Can you hand me a log book?",
+            "msg2": "Theres log notes and folders lying around, just put them together.",
+            "msg3": "I don't know if you've seen them... Everyone hides from light and is scared to death to be in the open...",
+            "task_msg": "Thank you... These logs contain valuable information about people who once were in this place.\n He leaves mumbling and reading the files. Slowly... As if he was crawling...",
+            "items": [],
+            "task_item": "logbook"
         }
     }
 }

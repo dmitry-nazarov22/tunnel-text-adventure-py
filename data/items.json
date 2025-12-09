@@ -9,21 +9,21 @@
 
         "crowbar": {
             "name": "crowbar",
-            "desc": "",
+            "desc": "Maybe I could use it as a weapon or at least open some doors. The cold metal...",
             "use_msg": "You break the ruined door and can now enter it.",
             "error_msg": "There are no rooms that would need this."
         },
 
         "keycard": {
             "name": "keycard",
-            "desc": "",
+            "desc": "This might come handy. The text is scraped off, but I can always try it everywhere.",
             "use_msg": "You try your keycard and... ... ... IT WORKS! Green light lit up and the door opened.",
             "error_msg": "There are no rooms that would need this."
         },
 
         "c4": {
             "name": "c4",
-            "desc": "",
+            "desc": "A remote controlled bomb. Now this becomes interesting...",
             "use_msg": "You place the c4 on the door. And now everything is in my hands. \nI should take the remote from my inventory and blow it.",
             "error_msg": "I don't want to waste it. I should use it on something bigger..."
         },
@@ -47,6 +47,69 @@
             "desc": "",
             "use_msg": "",
             "error_msg": "You can't use it by itself."
+        },
+
+        "tools": {
+            "name": "tools",
+            "desc": "Tools that were scattered around. There were duplicates so I got a complete set.",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself."
+        },
+
+        "box": {
+            "name": "box",
+            "desc": "It was laying around all empty. A box for something. It has a red handle and looks used.",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself."
+        },
+
+        "toolbox": {
+            "name": "toolbox",
+            "desc": "A toolbox with red handle.",
+            "use_msg": "",
+            "error_msg": "You can't use it here. Actually... I don't even know how to use these..."
+        },
+
+        "id": {
+            "name": "id",
+            "desc": "An ID card of a ... The text is scraped off, the photo resembles a man.",
+            "use_msg": "",
+            "error_msg": "This can't be used as it is."
+        },
+
+        "notes": {
+            "name": "notes",
+            "desc": "I don't understand any of this writing. It just doesn't make sense.",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself"
+        },
+
+        "folder": {
+            "name": "folder",
+            "desc": "A folder with a text 'LOGBOOK' on it. The text is a bit torn.",
+            "use_msg": "",
+            "error_msg": "You can't use it by itself"
+        },
+
+        "logbook": {
+            "name": "logbook",
+            "desc": "Contains lots of writing, but isn't readable for me.",
+            "use_msg": "",
+            "error_msg": "There's no way to use it here. It's just paper."
+        },
+
+        "adrenaline": {
+            "name": "adrenaline",
+            "desc": "A medicament for adrenaline. I shouldn't be relying on this... Hope I won't need this.",
+            "use_msg": "You use the adrenaline... It goes right into you and you ain't even sure what does it contain.\nYou gained some energy!",
+            "error_msg": "I feel good now. I should use it later... Or maybe not."
+        },
+
+        "soda": {
+            "name": "soda",
+            "desc": "I put my hand through the bottom of the vending machine and the only thing I got was this soda can.",
+            "use_msg": "You pop it open and drink it.\nYou gained some energy!",
+            "error_msg": "I feel good now. I should use it later... Or maybe not."
         }
     }
 }
