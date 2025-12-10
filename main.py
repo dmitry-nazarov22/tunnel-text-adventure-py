@@ -1,33 +1,38 @@
 from world import load_world, load_items, load_characters
 from player import Player
 from commands import handle_command
-from ui import print_game_over
+from ui import print_game_over, print_start
 
 def main():
-    rooms = load_world()
-    items = load_items()
-    characters = load_characters(rooms)
 
-    state = {
-    "rooms": rooms,
-    "items": items,
-    "characters": characters,
-    "current": "entrance",
-    "player": Player(),
-    "running": True,
-    "game_msg": ""
-    }
+    print_start()
 
-    rooms[state["current"]].look('full')
+    if input('Press enter to start the game.\n> ') != "quit":
 
-    rooms[state["current"]].been_here = "True"
+        rooms = load_world()
+        items = load_items()
+        characters = load_characters(rooms)
 
-    while state["running"] and state["player"].energy > 0 and state["current"] != "escape_tunnel":
-        print(f'Energy: {state["player"].energy}\n')
-        command = input("> ").strip()
-        handle_command(command, state)
+        state = {
+        "rooms": rooms,
+        "items": items,
+        "characters": characters,
+        "current": "entrance",
+        "player": Player(),
+        "running": True,
+        "game_msg": ""
+        }
 
-    print_game_over(state)
+        rooms[state["current"]].look('full')
+
+        rooms[state["current"]].been_here = "True"
+
+        while state["running"] and state["player"].energy > 0 and state["current"] != "escape_tunnel":
+            print(f'Energy: {state["player"].energy}\n')
+            command = input("> ").strip()
+            handle_command(command, state)
+
+        print_game_over(state)
 
 if __name__ == "__main__":
     main()

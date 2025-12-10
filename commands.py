@@ -66,7 +66,7 @@ def move(direction, state):
             if target_room.is_blowable != 'True':
                 if target_room.is_dark != 'True':
                     state["current"] = room.exits[direction]
-                    state["player"].energy -= 5
+                    state["player"].energy -= 3
 
                     if target_room.been_here == "False":
                         target_room.been_here = "True"
