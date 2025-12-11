@@ -1,7 +1,8 @@
 from ui import print_animated
 
 class Character:
-    def __init__(self, name, desc, location, msg1, msg2, msg3, task_msg, items, task_item):
+    def __init__(self, id, name, desc, location, msg1, msg2, msg3, task_msg, items, task_item):
+        self.id = id
         self.name = name
         self.desc = desc
         self.location = location
@@ -22,8 +23,13 @@ class Character:
             room.items.remove(self.task_item)
             self.items.append(self.task_item)
             room.characters.remove(self)
-            state["player"].score += 100
 
+            state["player"].score += 100
+            state[self.id + "_quest"] = True
+
+            if "radio" in self.items:
+                state["player"].inventory.append("radio")
+                self.items.remove("radio")
             return
 
         if self.talk_counter == 0:

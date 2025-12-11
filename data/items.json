@@ -110,6 +110,13 @@
             "desc": "I put my hand through the bottom of the vending machine and the only thing I got was this soda can.",
             "use_msg": "You pop it open and drink it.\nYou gained some energy!",
             "error_msg": "I feel good now. I should use it later... Or maybe not."
+        },
+
+        "radio": {
+            "name": "radio",
+            "desc": "A small radio device that was given to me by the mechanic. Maybe it will come in handy.",
+            "use_msg": "None",
+            "error_msg": "I turn it on and it gives me white noise that pulses. I can't use it here, underground..."
         }
     }
 }

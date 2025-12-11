@@ -46,6 +46,7 @@ def load_characters(rooms):
     characters = {}
     for character_id, character_data in data["characters"].items():
         characters[character_id] = Character(
+            id = character_data["id"],
             name = character_data["name"],
             desc = character_data["desc"],
             location = character_data["location"],

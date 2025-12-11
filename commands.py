@@ -32,7 +32,8 @@ def handle_command(cmd, state):
             state["player"].drop_item(body1, state["rooms"][state["current"]])
 
         case "use":
-            state["player"].use_item(state, body1)
+            if state["player"].use_item(state, body1):
+                state["player"].score += 25
 
         case "combine":
             state["player"].craft_item(state, body1, body2)
@@ -57,32 +58,38 @@ def handle_command(cmd, state):
 
 def move(direction, state):
     room = state["rooms"][state["current"]]
-
+    # CHECK FOR TARGET ROOM EXISTING
     if direction in room.exits and room.exits[direction]:
         target_room = state["rooms"][room.exits[direction]]
-
-
+        # CHECK FOR LOCK ON DOOR
         if target_room.is_locked != 'True' and target_room.is_keycard != 'True':
+            # CHECK FOR FINAL ROOM
             if target_room.is_blowable != 'True':
+                # CHECK IF ROOM IS DARK
                 if target_room.is_dark != 'True':
                     state["current"] = room.exits[direction]
-                    state["player"].energy -= 3
-
+                    # GAME MODE ENERGY CONSUMPTION
+                    if state["game_mode"] != "hard":
+                        state["player"].energy -= 2
+                    else:
+                        state["player"].energy -= 5
+                    # CHECK FOR BEING IN THE ROOM BEFORE
                     if target_room.been_here == "False":
                         target_room.been_here = "True"
                         state["rooms"][state["current"]].look("full")
                     else:
                         state["rooms"][state["current"]].look("short")
-
+                # DARK ROOM DESCRIPTION
                 else:
                     state["current"] = room.exits[direction]
                     state["rooms"][state["current"]].look("dark")
-
+            # FINAL ROOM LOCKED
             elif target_room.is_blowable == 'True':
                 print_animated("The door is very big. I need something big to get rid of it")
-
+        # LOCKED ROOM LOCKED
         elif target_room.is_locked == 'True':
             print_animated("The door is blocked... Maybe I'll find something that will help me.")
+        # KEYCARD ROOM LOCKED
         elif target_room.is_keycard == 'True':
             print_animated("The door has a keycard lock on it... Maybe I'll find one that will open it.")
 

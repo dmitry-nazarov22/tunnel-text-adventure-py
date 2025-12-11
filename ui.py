@@ -47,8 +47,9 @@ def print_game_over(state):
 
         """
         print_animated(ascii_art, 0.002)
+        print_animated(f'Score:   {state["player"].score}\n')
 
-    elif state["game_msg"] == "blowed_up":
+    elif state["current"] == "blowed_up":
         os.system('cls' if os.name == 'nt' else 'clear')
         ascii_art = """
 
@@ -61,8 +62,12 @@ def print_game_over(state):
 
         """
         print_animated(ascii_art, 0.002)
+        print_animated(f'Score:               {state["player"].score}\n')
+        return
 
     elif state["current"] == "escape_tunnel":
+        state["current"] = "cleared_game"
+
         os.system('cls' if os.name == 'nt' else 'clear')
         ascii_art = """
 
@@ -75,6 +80,14 @@ def print_game_over(state):
 
         """
         print_animated(ascii_art, 0.002)
+        print_animated(f'Score:               {state["player"].score}\n')
 
-    print_animated(f'\n\n\nScore:               {state["player"].score}\n\n\n')
 
+    if state["player"].score >= 500 and state["mechanist_quest"] == True and state["lost_worker_quest"] == True and state["current"] == "cleared_game":
+        print_block("The air seemed to tear the fabric of the tunnel. When the door clanged open, light burst in, not the cold, artificial glow of lamps, but real, wide, and beautiful. You stand in the ruins, and the world around you seems exposed, nothing is hidden. I'm tired but finally calm. From the radio mechanic gave me comes faint human speech: coordinates, a promise of evacuation. You look outside, where the sky is absurdly bright, and realize that the exit is not only physical.")
+    elif state["player"].score >= 300 and state["mechanist_quest"] == True and state["current"] == "cleared_game":
+        print_block("The platform greets you with the same emptiness. You decided to return... Feeling fresh air running through ventilations that are humming calmly. Seeing the wasteland and nothing else on the surface, you understood everything... This is the end. You hadn't chosen the most convenient path, but it worked: the generator hummed intermittently, and some doors were open. Around you are those who managed to survive alone, figures who don't smile, but don't run to hide. You walk into the light, but feel an emptiness in your chest. This isn't freedom, it's a compromise: you were alive.")
+    elif state["player"].score >= 125 and state["current"] == "cleared_game":
+        print_block("You got out. But at what price...  Blowed out the main entrance leaving all the people behind. After seeing the wasteland above you don't even know where you could go. Returning back underground isn't an option. So you try to wander around to find something...")
+    else:
+        print_block("The doors remain motionless, and the light a rare mirage. You wander the familiar corridors, but they no longer return their promise. The echo follows your steps for too long, reflecting not only the sound but also the emptiness of the decisions you made (or didn't make). You find old signs, warnings, but it's too late—the air has cooled, and the place where you could have escaped is blocked forever.")

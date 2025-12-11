@@ -42,8 +42,10 @@ class Player:
                     print_animated(state["items"][name].use_msg)
                     current.is_dark = 'False'
                     state["rooms"][state["current"]].look("full")
+                    return True
                 else:
                     print_animated(state["items"][name].error_msg)
+                    return False
 
             case "crowbar":
                 all_directions = current.exits
@@ -83,7 +85,7 @@ class Player:
             case "remote":
                 if state["current"] == 'sealed_door':
                     print_animated("... ... ... ... does it work?? ... BOOOOOOOM!!!")
-                    state["game_msg"] = "blowed_up"
+                    state["current"] = "blowed_up"
                     state['running'] = False
                     return True
                 else:
@@ -140,6 +142,10 @@ class Player:
                 return False
 
             case "logbook":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "radio":
                 print_animated(state["items"][name].error_msg)
                 return False
 
