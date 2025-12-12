@@ -77,8 +77,6 @@ def handle_command(cmd, state):
             else:
                 print_animated("Please input: combine <item1> <item2>")
 
-            print_animated("No one with that name is here.")
-
         case "talk":
             if len(words) >= 2:
                 target_name = obj1

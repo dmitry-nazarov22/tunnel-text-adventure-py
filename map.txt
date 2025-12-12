@@ -10,7 +10,7 @@
 										power control room              |                          |
 										    [keycard]		     		|                          |
 												|					train car 2     ––––––>  operator booth
-												|				    [dynamite]                 [log_disc]
+												|				    [dynamite]
 												|						|
 										  generator room                |
 											 [tools]			    train car 1                                      escape tunnel
