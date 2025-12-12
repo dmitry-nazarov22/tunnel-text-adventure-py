@@ -32,14 +32,12 @@ def main():
             print_animated("\nHard mode enabled.\n")
             state["game_mode"] = start_input
 
-        rooms[state["current"]].look('full')
+        rooms[state["current"]].look('full', state)
 
         rooms[state["current"]].been_here = "True"
 
         while state["running"] and state["player"].energy > 0 and state["current"] != "escape_tunnel":
-            print(f'Energy: {state["player"].energy}\n')
-            print(f'Score: {state["player"].score}\n')
-            command = input("> ").strip()
+            command = input("\n> ").strip()
             handle_command(command, state)
 
         print_game_over(state)

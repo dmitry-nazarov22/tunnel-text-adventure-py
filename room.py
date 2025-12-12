@@ -15,7 +15,7 @@ class Room:
         self.items = items or []
         self.characters = characters
 
-    def look(self, desc_id):
+    def look(self, desc_id, state):
         print("\n" + self.name + "\n")
         if desc_id == 'full':
             print_block(self.desc_full)
@@ -36,3 +36,5 @@ class Room:
                 print_animated("You see some items lying around:")
                 print_animated(items)
                 print()
+
+        print(f'Energy: {state["player"].energy}')

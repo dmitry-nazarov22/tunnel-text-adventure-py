@@ -41,7 +41,7 @@ class Player:
                 if current.is_dark == 'True':
                     print_animated(state["items"][name].use_msg)
                     current.is_dark = 'False'
-                    state["rooms"][state["current"]].look("full")
+                    state["rooms"][state["current"]].look("full", state)
                     return True
                 else:
                     print_animated(state["items"][name].error_msg)

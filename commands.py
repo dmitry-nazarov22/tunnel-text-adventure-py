@@ -8,35 +8,44 @@ def handle_command(cmd, state):
     verb = words[0].lower()
 
     if len(words) > 1:
-        body1 = words[1].lower()
+        obj1 = words[1].lower()
     if len(words) > 2:
-        body2 = words[2].lower()
+        obj2 = words[2].lower()
 
     match verb:
         case "look":
-            state["rooms"][state["current"]].look('full')
+            state["rooms"][state["current"]].look('full', state)
+
+        case "examine":
+            if len(words) >= 2:
+                if obj1 in state["items"]:
+                    state["items"][obj1].examine()
+                else:
+                    print_animated("You don't have that.")
+            else:
+                print_animated("Please input: examine <item>")
 
         case "go":
             if len(words) < 2:
                 print("Go where?")
                 return
-            move(body1, state)
+            move(obj1, state)
 
         case "inventory":
             state["player"].show_inventory()
 
         case "take":
-            state["player"].add_item(state, body1, state["rooms"][state["current"]])
+            state["player"].add_item(state, obj1, state["rooms"][state["current"]])
 
         case "drop":
-            state["player"].drop_item(body1, state["rooms"][state["current"]])
+            state["player"].drop_item(obj1, state["rooms"][state["current"]])
 
         case "use":
-            if state["player"].use_item(state, body1):
+            if state["player"].use_item(state, obj1):
                 state["player"].score += 25
 
         case "combine":
-            state["player"].craft_item(state, body1, body2)
+            state["player"].craft_item(state, obj1, obj2)
 
         case "talk":
             current_room = state["rooms"][state["current"]]
@@ -76,13 +85,13 @@ def move(direction, state):
                     # CHECK FOR BEING IN THE ROOM BEFORE
                     if target_room.been_here == "False":
                         target_room.been_here = "True"
-                        state["rooms"][state["current"]].look("full")
+                        state["rooms"][state["current"]].look("full", state)
                     else:
-                        state["rooms"][state["current"]].look("short")
+                        state["rooms"][state["current"]].look("short", state)
                 # DARK ROOM DESCRIPTION
                 else:
                     state["current"] = room.exits[direction]
-                    state["rooms"][state["current"]].look("dark")
+                    state["rooms"][state["current"]].look("dark", state)
             # FINAL ROOM LOCKED
             elif target_room.is_blowable == 'True':
                 print_animated("The door is very big. I need something big to get rid of it")
