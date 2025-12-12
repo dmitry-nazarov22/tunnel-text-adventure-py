@@ -47,6 +47,23 @@ def handle_command(cmd, state):
             else:
                 print_animated("Please input: drop <item>")
 
+        case "give":
+            if len(words) >= 3:
+                target_name = obj1
+                item_name = obj2
+                current_room = state["rooms"][state["current"]]
+
+                if not current_room.characters:
+                    print_animated("He's not here...")
+                    return
+
+                for npc in current_room.characters:
+                    if npc.name.lower() == target_name:
+                        npc.give(state["player"], current_room, item_name)
+                        return
+            else:
+                print_animated("Please input: give <character> <item>")
+
         case "use":
             if len(words) >= 2:
                 if state["player"].use_item(state, obj1):

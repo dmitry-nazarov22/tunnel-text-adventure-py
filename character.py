@@ -18,10 +18,8 @@ class Character:
     def talk(self, state, room):
         print("\n" + self.name)
 
-        if self.task_item in room.items:
+        if self.task_item in self.items:
             print_animated(self.task_msg)
-            room.items.remove(self.task_item)
-            self.items.append(self.task_item)
             room.characters.remove(self)
 
             state["player"].score += 100
@@ -40,3 +38,14 @@ class Character:
             self.talk_counter += 1
         else:
             print_animated(self.msg3)
+
+    def give(self, player, room, item):
+        if item in player.inventory:
+            if item == self.task_item:
+                player.inventory.remove(self.task_item)
+                self.items.append(self.task_item)
+                print_animated("Oh, you found it!  Talk to me when you have time.")
+            else:
+                print_animated("Thank you. But I don't need that... You should have it.")
+        else:
+            print_animated("You don't have that.")
