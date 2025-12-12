@@ -30,6 +30,7 @@ class Room:
             if self.characters:
                 for character in self.characters:
                     print(f"You notice someone here...")
+                    print(f'\n{character.name}\n')
                     print_block(character.desc)
             if self.items:
                 items = "", ", ".join(self.items)

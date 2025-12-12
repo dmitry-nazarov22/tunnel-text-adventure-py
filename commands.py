@@ -35,27 +35,48 @@ def handle_command(cmd, state):
             state["player"].show_inventory()
 
         case "take":
-            state["player"].add_item(state, obj1, state["rooms"][state["current"]])
+            if len(words) >= 2:
+                state["player"].add_item(state, obj1, state["rooms"][state["current"]])
+            else:
+                print_animated("Please input: take <item>")
+
 
         case "drop":
-            state["player"].drop_item(obj1, state["rooms"][state["current"]])
+            if len(words) >= 2:
+                state["player"].drop_item(obj1, state["rooms"][state["current"]])
+            else:
+                print_animated("Please input: drop <item>")
 
         case "use":
-            if state["player"].use_item(state, obj1):
-                state["player"].score += 25
+            if len(words) >= 2:
+                if state["player"].use_item(state, obj1):
+                    state["player"].score += 25
+            else:
+                print_animated("Please input: use <item>")
 
         case "combine":
-            state["player"].craft_item(state, obj1, obj2)
+            if len(words) >= 3:
+                state["player"].craft_item(state, obj1, obj2)
+            else:
+                print_animated("Please input: combine <item1> <item2>")
+
+            print_animated("No one with that name is here.")
 
         case "talk":
-            current_room = state["rooms"][state["current"]]
+            if len(words) >= 2:
+                target_name = obj1
+                current_room = state["rooms"][state["current"]]
 
-            if not current_room.characters:
-                print_animated("There's no one here. But I was sure...")
-                return
+                if not current_room.characters:
+                    print_animated("There's no one here. But I was sure...")
+                    return
 
-            for npc in current_room.characters:
-                npc.talk(state, current_room)
+                for npc in current_room.characters:
+                    if npc.name.lower() == target_name:
+                        npc.talk(state, current_room)
+                        return
+            else:
+                print_animated("Please input: talk <character>")
 
         case "quit":
             print_animated("Closing the game...")
