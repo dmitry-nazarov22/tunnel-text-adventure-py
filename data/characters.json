@@ -10,7 +10,9 @@
             "msg3": "I would love to fix the ventilation that failed during the emergency... Maybe it was all my fault...",
             "task_msg": "I should tell you that combining detonator and dynamite could result in a quite a tool as well. But now I can finally try fixing the ventilation to survive here. Here is a little radio I've been working on. Although it doesn't get any signals up here...\n... He leaves without making too much noise, as if he was avoiding something...",
             "items": ["radio"],
-            "task_item": "toolbox"
+            "task_item": "toolbox",
+            "trade_offer": [],
+            "trade_cost": []
         },
 
         "lost_worker": {
@@ -23,7 +25,9 @@
             "msg3": "I've searched everywhere... Maybe I should see in room next to the train... Where my ID could be...",
             "task_msg": "I've searched for it for ages... Now I can finally leave...\nHe starts disappearing, as if he was tearing into small bits and just...",
             "items": [],
-            "task_item": "id"
+            "task_item": "id",
+            "trade_offer": [],
+            "trade_cost": []
         },
 
         "archivist": {
@@ -32,11 +36,13 @@
             "desc": "An old person covered in dust, clutching torn folders. Their hands shake as they trace invisible patterns in the air. They ask you questions you don't know how to answer.",
             "location": "archive_room",
             "msg1": "Oh, Hello. I rarely have any visitors. Can you hand me a log book?",
-            "msg2": "Theres log notes and folders lying around, just put them together.",
+            "msg2": "Theres log notes and folders lying around, just put them together. Also we could trade something. I could offer a dynamite to you for something I need...",
             "msg3": "I don't know if you've seen them... Everyone hides from light and is scared to death to be in the open...",
-            "task_msg": "These logs contain valuable information about people who once were in this place.\n He leaves mumbling and reading the files. Slowly... As if he was crawling...",
+            "task_msg": "These logs contain valuable information about people who once were in this place.\n He starts mumbling and reading the files. Slowly... And a sudden calmness rose up in this room.",
             "items": [],
-            "task_item": "logbook"
+            "task_item": "logbook",
+            "trade_offer": ["dynamite", "soda"],
+            "trade_cost": ["price1", "price2"]
         }
     }
 }

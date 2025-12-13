@@ -93,8 +93,31 @@ def handle_command(cmd, state):
             else:
                 print_animated("Please input: talk <character>")
 
+        case "trade":
+            if len(words) >= 2:
+                target_name = obj1
+                current_room = state["rooms"][state["current"]]
+
+                if not current_room.characters:
+                    print_animated("There's no one here. But I was sure...")
+                    return
+
+                if len(words) == 2:
+                    for npc in current_room.characters:
+                        if npc.name.lower() == target_name:
+                            npc.trade_list()
+                            return
+                elif len(words) == 3 and obj2 in state["player"].inventory:
+                    for npc in current_room.characters:
+                        if npc.name.lower() == target_name:
+                            npc.trade_item(state, obj2)
+                            return
+            else:
+                print_animated("Please input: trade <character>")
+
         case "quit":
             print_animated("Closing the game...")
+            state["current"] = "quit"
             state["running"] = False
 
         case _:

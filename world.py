@@ -56,6 +56,8 @@ def load_characters(rooms):
             task_msg = character_data["task_msg"],
             items = character_data["items"],
             task_item = character_data["task_item"],
+            trade_offer = character_data["trade_offer"],
+            trade_cost = character_data["trade_cost"]
         )
         current_character = characters[character_id]
         rooms[current_character.location].characters.append(current_character)

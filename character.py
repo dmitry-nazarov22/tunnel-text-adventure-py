@@ -1,7 +1,7 @@
-from ui import print_animated
+from ui import print_animated, print_block
 
 class Character:
-    def __init__(self, id, name, desc, location, msg1, msg2, msg3, task_msg, items, task_item):
+    def __init__(self, id, name, desc, location, msg1, msg2, msg3, task_msg, items, task_item, trade_offer, trade_cost):
         self.id = id
         self.name = name
         self.desc = desc
@@ -12,6 +12,8 @@ class Character:
         self.task_msg = task_msg
         self.items = items
         self.task_item = task_item
+        self.trade_offer = trade_offer
+        self.trade_cost = trade_cost
 
         self.talk_counter = 0
 
@@ -20,7 +22,8 @@ class Character:
 
         if self.task_item in self.items:
             print_animated(self.task_msg)
-            room.characters.remove(self)
+            if len(self.trade_offer) <= 0 and len(self.trade_cost) <= 0:
+                room.characters.remove(self)
 
             state["player"].score += 100
             state[self.id + "_quest"] = True
@@ -49,3 +52,37 @@ class Character:
                 print_animated("Thank you. But I don't need that... You should have it.")
         else:
             print_animated("You don't have that.")
+
+    def trade_list(self):
+        if len(self.trade_offer) > 0 and len(self.trade_cost) > 0:
+            print_animated("We could trade the following:")
+            for i in range(len(self.trade_offer)):
+                print_animated(f'{self.trade_offer[i]} for {self.trade_cost[i]}')
+
+            print_animated("\nTo trade enter:\ntrade <character> <cost>")
+        else:
+            print_animated("I have nothing to trade...")
+
+    def trade_item(self, state, item):
+        if len(self.trade_offer) > 0 and len(self.trade_cost) > 0:
+            if item in self.trade_cost:
+
+                count = 0
+                for place in self.trade_cost:
+                    if item == place:
+                        break
+                    else:
+                        count += 1
+
+                state["player"].score += 100
+                print_animated("Thank you. It's always nice to make a good deal.")
+                print_animated(f'{self.trade_offer[count]} added to your inventory.')
+                state["player"].inventory.append(self.trade_offer[count])
+                state["player"].inventory.remove(self.trade_cost[count])
+                self.trade_offer.remove(self.trade_offer[count])
+                self.trade_cost.remove(self.trade_cost[count])
+
+            else:
+                print_animated("I don't need that.\n To see trade list enter: trade <character>")
+        else:
+            print_animated("I have nothing to trade...")

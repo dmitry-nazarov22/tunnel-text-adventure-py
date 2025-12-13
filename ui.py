@@ -34,6 +34,9 @@ def print_start():
     print_block(desc, 0.002)
 
 def print_game_over(state):
+    if state["current"] == "quit":
+        return
+
     if state["player"].energy <= 0:
         os.system('cls' if os.name == 'nt' else 'clear')
         ascii_art = """

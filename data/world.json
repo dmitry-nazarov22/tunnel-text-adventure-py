@@ -222,7 +222,7 @@
         "north": "train_car3",
         "east": "operator_booth"
       },
-      "items": ["dynamite"],
+      "items": [],
       "characters": []
     },
 
