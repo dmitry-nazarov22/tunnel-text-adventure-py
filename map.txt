@@ -7,19 +7,19 @@
 																	train car 3               archive room
 																	    |                      archivist
 																	    |                    [notes, folder]
-										power control room              |                          |
+										power control room              |                [dynamite, adrenaline]
 										    [keycard]		     		|                          |
 												|					train car 2     ––––––>  operator booth
-												|				    [dynamite]
+												|				    	|
 												|						|
 										  generator room                |
 											 [tools]			    train car 1                                      escape tunnel
-												|                       |                                                 END
+												|                    [coins]                                              END
 												| 					    |                                                  |
 												| 					    |                                                  X
 												|					    |                                                  |
 	     first aid room   <––––––––    maintenance shaft  <–––x–––  station B                                         sealed door
-		   [adrenaline]					    mechanic					|                                                  |
+		             					    mechanic					|                                                  |
 									            |     					|                                                  |
 												|						|                                                  |
 												|						|                                                  |
@@ -35,7 +35,7 @@
 												|				        |
 												|				        |
 				chamber room  <––––––– pitch black tunnel <––D–––  track junction  ––x––> service room
-																		|				     [soda]
+					[cash]												|				     [soda]
 																		|
 																		|
 																	long tunnel

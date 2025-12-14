@@ -2,9 +2,9 @@ from ui import print_animated
 
 class Player:
     def __init__(self):
-        self.inventory = []
+        self.inventory = ["c4", "keycard"]
         self.energy = 100
-        self.score = 0
+        self.score = 125
 
     def add_item(self, state, name, room):
         if name in room.items:
@@ -146,6 +146,14 @@ class Player:
                 return False
 
             case "radio":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "cash":
+                print_animated(state["items"][name].error_msg)
+                return False
+
+            case "coins":
                 print_animated(state["items"][name].error_msg)
                 return False
 

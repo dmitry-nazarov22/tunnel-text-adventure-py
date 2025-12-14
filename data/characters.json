@@ -15,9 +15,9 @@
             "trade_cost": []
         },
 
-        "lost_worker": {
-            "id": "lost_worker",
-            "name": "Lost Worker",
+        "worker": {
+            "id": "worker",
+            "name": "Worker",
             "desc": "A pale man in a torn uniform. His eyes track you with slow delay, like he's not fully here. He whispers fragments of instructions that make no sense.",
             "location": "dead_end",
             "msg1": "Hmmmmmmm... Mhhhmmm...",
@@ -41,8 +41,8 @@
             "task_msg": "These logs contain valuable information about people who once were in this place.\n He starts mumbling and reading the files. Slowly... And a sudden calmness rose up in this room.",
             "items": [],
             "task_item": "logbook",
-            "trade_offer": ["dynamite", "soda"],
-            "trade_cost": ["price1", "price2"]
+            "trade_offer": ["dynamite", "adrenaline"],
+            "trade_cost": ["coins", "cash"]
         }
     }
 }

@@ -85,7 +85,7 @@
       "exits": {
         "east": "dark_tunnel"
       },
-      "items": [],
+      "items": ["cash"],
       "characters": []
   },
 
@@ -203,7 +203,7 @@
       "is_keycard": "False",
       "is_blowable": "False",
       "exits": { "south": "station_b", "north": "train_car2" },
-      "items": [],
+      "items": ["coins"],
       "characters": []
     },
 

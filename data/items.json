@@ -117,6 +117,20 @@
             "desc": "A small radio device that was given to me by the mechanic. Maybe it will come in handy.",
             "use_msg": "None",
             "error_msg": "I turn it on and it gives me white noise that pulses. I can't use it here, underground..."
+        },
+
+        "cash": {
+            "name": "cash",
+            "desc": "Old banknotes that were once the center of life. Now they are meaningless...",
+            "use_msg": "None",
+            "error_msg": "Some time ago these meant a lot to me..."
+        },
+
+        "coins": {
+            "name": "coins",
+            "desc": "Old coins, that are now useless. At least for me...",
+            "use_msg": "None",
+            "error_msg": "Some time ago these meant a lot to me..."
         }
     }
 }
