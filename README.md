@@ -15,7 +15,7 @@ python3 main.py
 **Project Structure**
 
 - **`main.py`**: Game entry point and main loop. Loads world, items, characters, and handles the command loop.
-- **`world.py`**: Loads `map.txt` and JSON files from `data/` to build `Room`, `Item`, and `Character` objects.
+- **`world.py`**: Loads JSON files from `data/` to build `Room`, `Item`, and `Character` objects.
 - **`player.py`**: The `Player` class with attributes like `energy` and `inventory`.
 - **`room.py`**: `Room` class and room-related behaviors (descriptions, `look()` method).
 - **`item.py`**: `Item` class and item logic (properties, combination behavior).
@@ -24,7 +24,7 @@ python3 main.py
 - **`ui.py`**: Terminal output helpers such as `print_start`, `print_animated`, and `print_game_over`.
 - **`map.txt`** and **`data/`**: Game data files. `data/` contains `world.json`, `items.json`, `characters.json`, and `help.txt`.
 
-**Game Atmosphere (Story Intro — translated and expanded)**
+**Game Atmosphere (Story Intro — expanded)**
 The game's world is set in a future-era underground metro network that was built to evacuate government leadership. After an accident, parts of the caretaking staff disappeared while others remained in the tunnels — but not in human form anymore. They hear but cannot see. It is unclear whether they are alive; they simply continue their duty to the end. Stations were sealed and isolated, documents destroyed, but scattered notes, logs, and torn records remain. You awaken unconscious at a collapsed entrance — dazed, you now find yourself at the threshold.
 
 The game greets the player with this scene and immediately shows the first room description and an energy counter starting at 100. Energy is the player's resource and decreases each time you move between locations. The implication is clear — you must escape.
