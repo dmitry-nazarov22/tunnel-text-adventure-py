@@ -1,0 +1,19 @@
+
+HELP:
+
+COMMANDS:
+
+look                        –   show full room description
+examine <item>              –   show item description
+go <way>                    –   go to the room in (north, east, south, west)
+inventory                   -   show all items in inventory
+take <item>                 –   take item from the room to your inventory
+drop <item>                 –   drop the item from your inventory
+give <character> <item>     –   give item to character (needed for quests)
+use <item>                  –   use items ability (consumable items are for one time use)
+combine <item1> <item2>     –   combine items (crafting mechanic)
+talk <character>            –   talk with selected character (use multiple times for all dialogues)
+trade <character>           –   show all items character has listed for trade
+trade <character> <item>    –   offer character an item to trade (<item> is the item you're giving out)
+help                        –   display help instructions (this screen)
+quit                        –   quit the game

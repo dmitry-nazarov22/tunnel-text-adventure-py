@@ -14,6 +14,13 @@ def print_block(text, delay=0.01, width=60):
         print_animated(line, delay)
     print()
 
+def print_help():
+    f = open('data/help.txt', 'r')
+    file_contents = f.read()
+    print_animated(file_contents, 0.001)
+    f.close()
+
+
 def print_start():
     os.system('cls' if os.name == 'nt' else 'clear')
     ascii_art = """

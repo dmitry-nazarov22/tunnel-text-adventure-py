@@ -59,7 +59,7 @@ class Character:
             for i in range(len(self.trade_offer)):
                 print_animated(f'{self.trade_offer[i]} for {self.trade_cost[i]}')
 
-            print_animated("\nTo trade enter:\ntrade <character> <cost>")
+            print_animated("\nTo trade enter:\ntrade <character> <item>")
         else:
             print_animated("I have nothing to trade...")
 

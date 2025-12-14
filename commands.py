@@ -1,4 +1,4 @@
-from ui import print_animated
+from ui import print_animated, print_help
 
 def handle_command(cmd, state):
     words = cmd.split()
@@ -114,6 +114,9 @@ def handle_command(cmd, state):
                             return
             else:
                 print_animated("Please input: trade <character>")
+
+        case "help":
+            print_help()
 
         case "quit":
             print_animated("Closing the game...")
