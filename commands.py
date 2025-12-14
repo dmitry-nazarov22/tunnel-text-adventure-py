@@ -18,7 +18,7 @@ def handle_command(cmd, state):
 
         case "examine":
             if len(words) >= 2:
-                if obj1 in state["items"]:
+                if obj1 in state["player"].inventory:
                     state["items"][obj1].examine()
                 else:
                     print_animated("You don't have that.")
