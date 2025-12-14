@@ -24,7 +24,7 @@ def main():
             "player": Player(),
             "running": True,
             "mechanist_quest": False,
-            "lost_worker_quest": False,
+            "worker_quest": False,
             "archivist_quest": False,
         }
 

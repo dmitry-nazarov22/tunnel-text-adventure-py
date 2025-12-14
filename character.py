@@ -21,7 +21,7 @@ class Character:
         print("\n" + self.name)
 
         if self.task_item in self.items:
-            print_animated(self.task_msg)
+            print_block(self.task_msg)
             if len(self.trade_offer) <= 0 and len(self.trade_cost) <= 0:
                 room.characters.remove(self)
 
@@ -34,13 +34,13 @@ class Character:
             return
 
         if self.talk_counter == 0:
-            print_animated(self.msg1)
+            print_block(self.msg1)
             self.talk_counter += 1
         elif self.talk_counter < 2:
-            print_animated(self.msg2)
+            print_block(self.msg2)
             self.talk_counter += 1
         else:
-            print_animated(self.msg3)
+            print_block(self.msg3)
 
     def give(self, player, room, item):
         if item in player.inventory:

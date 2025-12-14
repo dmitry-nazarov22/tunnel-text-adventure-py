@@ -2,9 +2,9 @@ from ui import print_animated
 
 class Player:
     def __init__(self):
-        self.inventory = ["c4", "keycard"]
+        self.inventory = []
         self.energy = 100
-        self.score = 125
+        self.score = 0
 
     def add_item(self, state, name, room):
         if name in room.items:

@@ -141,9 +141,9 @@ def move(direction, state):
                     state["current"] = room.exits[direction]
                     # GAME MODE ENERGY CONSUMPTION
                     if state["game_mode"] != "hard":
-                        state["player"].energy -= 2
+                        state["player"].energy -= 1
                     else:
-                        state["player"].energy -= 5
+                        state["player"].energy -= 3
                     # CHECK FOR BEING IN THE ROOM BEFORE
                     if target_room.been_here == "False":
                         target_room.been_here = "True"
